@@ -1,0 +1,49 @@
+{smcl}
+{txt}{sf}{ul off}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}/Users/jpmvbastos/Documents/GitHub/OccupationalLicensingBR/Data/Results/shares_2024.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res} 7 Oct 2024, 11:27:42
+
+{txt}Sampling weights:{col 19}{res}V1028
+             {txt}VCE:{col 19}{res}linearized
+     {txt}Single unit:{col 19}{res}missing
+        {txt}Strata 1:{col 19}{res}Estrato
+ {txt}Sampling unit 1:{col 19}{res}UPA
+           {txt}FPC 1:{col 19}<zero>
+{p2colreset}{...}
+% of Workforce in category, Quarter 1
+{res}
+{smcl}
+{reset}{...}
+{hline 10}{c -}{c TT}{c -}{c -}{hline 8}
+regulated{space 1} {c |}  {result:.2309082}
+minreq{space 4} {c |}  {result:.1558864}
+licensed_t {c |}  {result:.1339781}
+{hline 10}{c -}{c BT}{c -}{c -}{hline 8}
+% of Workforce in category, Quarter 2
+{res}
+{smcl}
+{reset}{...}
+{hline 10}{c -}{c TT}{c -}{c -}{hline 8}
+regulated{space 1} {c |}  {result:.2299365}
+minreq{space 4} {c |}  {result:.1559442}
+licensed_t {c |}  {result:.1336996}
+{hline 10}{c -}{c BT}{c -}{c -}{hline 8}
+% of Workforce in category, Quarter 3
+{res}{err}no observations
+{txt}{search r(2000), local:r(2000);}
+
+end of do-file
+
+{search r(2000), local:r(2000);}
+
+{com}. table [pweight=V1028], stat(mean historian)
+{res}
+{smcl}
+{reset}{...}
+{hline 4}{c -}{c TT}{c -}{c -}{hline 8}
+Mean {c |}  {result:.0000102}
+{hline 4}{c -}{c BT}{c -}{c -}{hline 8}
+
+{com}. 

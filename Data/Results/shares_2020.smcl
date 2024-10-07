@@ -1,0 +1,57 @@
+{smcl}
+{txt}{sf}{ul off}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}/Users/jpmvbastos/Documents/GitHub/OccupationalLicensingBR/Data/Results/shares_2020.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res} 7 Oct 2024, 11:25:10
+
+{txt}Sampling weights:{col 19}{res}V1028
+             {txt}VCE:{col 19}{res}linearized
+     {txt}Single unit:{col 19}{res}missing
+        {txt}Strata 1:{col 19}{res}Estrato
+ {txt}Sampling unit 1:{col 19}{res}UPA
+           {txt}FPC 1:{col 19}<zero>
+{p2colreset}{...}
+% of Workforce in category, Quarter 1
+{res}
+{smcl}
+{reset}{...}
+{hline 10}{c -}{c TT}{c -}{c -}{hline 8}
+regulated{space 1} {c |}  {result:.2089743}
+minreq{space 4} {c |}  {result:.1332434}
+licensed_t {c |}  {result:.1181716}
+{hline 10}{c -}{c BT}{c -}{c -}{hline 8}
+% of Workforce in category, Quarter 2
+{res}
+{smcl}
+{reset}{...}
+{hline 10}{c -}{c TT}{c -}{c -}{hline 8}
+regulated{space 1} {c |}  {result:.2068701}
+minreq{space 4} {c |}  {result:.1388577}
+licensed_t {c |}  {result:.1272588}
+{hline 10}{c -}{c BT}{c -}{c -}{hline 8}
+% of Workforce in category, Quarter 3
+{res}
+{smcl}
+{reset}{...}
+{hline 10}{c -}{c TT}{c -}{c -}{hline 8}
+regulated{space 1} {c |}  {space 1}{result:.208658}
+minreq{space 4} {c |}  {result:.1365574}
+licensed_t {c |}  {space 1}{result:.123724}
+{hline 10}{c -}{c BT}{c -}{c -}{hline 8}
+% of Workforce in category, Quarter 4
+{res}
+{smcl}
+{reset}{...}
+{hline 10}{c -}{c TT}{c -}{c -}{hline 8}
+regulated{space 1} {c |}  {result:.2131142}
+minreq{space 4} {c |}  {result:.1407061}
+licensed_t {c |}  {result:.1264065}
+{hline 10}{c -}{c BT}{c -}{c -}{hline 8}
+      name:  {res}<unnamed>
+       {txt}log:  {res}/Users/jpmvbastos/Documents/GitHub/OccupationalLicensingBR/Data/Results/shares_2020.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res} 7 Oct 2024, 11:25:12
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}

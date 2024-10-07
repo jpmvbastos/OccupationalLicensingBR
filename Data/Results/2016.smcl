@@ -1,0 +1,185 @@
+{smcl}
+{txt}{sf}{ul off}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}/Users/jpmvbastos/Documents/GitHub/OccupationalLicensingBR/Data/Results/2016.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res} 5 Oct 2024, 21:16:23
+
+{txt}Sampling weights:{col 19}{res}V1028
+             {txt}VCE:{col 19}{res}linearized
+     {txt}Single unit:{col 19}{res}missing
+        {txt}Strata 1:{col 19}{res}Estrato
+ {txt}Sampling unit 1:{col 19}{res}UPA
+           {txt}FPC 1:{col 19}<zero>
+{p2colreset}{...}
+% of Workforce in category, Quarter 1
+{res}
+{smcl}
+{reset}{...}
+{hline 10}{c -}{c TT}{c -}{c -}{hline 8}
+regulated{space 1} {c |}  {result:.2070444}
+minreq{space 4} {c |}  {result:.1273252}
+licensed_t {c |}  {result:.1105821}
+{hline 10}{c -}{c BT}{c -}{c -}{hline 8}
+Mean wage, category allworkers, Quarter 1
+{res}
+{smcl}
+{reset}{...}
+{hline 6}{c -}{c TT}{c -}{c -}{hline 8}
+Mean{space 2} {c |}  {result:2104.717}
+Median {c |}  {space 4}{result:1300}
+{hline 6}{c -}{c BT}{c -}{c -}{hline 8}
+Mean wage, category unlicensed, Quarter 1
+{res}
+{smcl}
+{reset}{...}
+{hline 6}{c -}{c TT}{c -}{c -}{hline 8}
+Mean{space 2} {c |}  {result:1934.188}
+Median {c |}  {space 4}{result:1200}
+{hline 6}{c -}{c BT}{c -}{c -}{hline 8}
+Mean wage, category minreq, Quarter 1
+{res}
+{smcl}
+{reset}{...}
+{hline 6}{c -}{c TT}{c -}{c -}{hline 8}
+Mean{space 2} {c |}  {result:3273.361}
+Median {c |}  {space 4}{result:2000}
+{hline 6}{c -}{c BT}{c -}{c -}{hline 8}
+Mean wage, category licensed_t, Quarter 1
+{res}
+{smcl}
+{reset}{...}
+{hline 6}{c -}{c TT}{c -}{c -}{hline 8}
+Mean{space 2} {c |}  {result:3571.419}
+Median {c |}  {space 4}{result:2000}
+{hline 6}{c -}{c BT}{c -}{c -}{hline 8}
+% of Workforce in category, Quarter 2
+{res}
+{smcl}
+{reset}{...}
+{hline 10}{c -}{c TT}{c -}{c -}{hline 8}
+regulated{space 1} {c |}  {result:.2070135}
+minreq{space 4} {c |}  {result:.1281655}
+licensed_t {c |}  {result:.1106007}
+{hline 10}{c -}{c BT}{c -}{c -}{hline 8}
+Mean wage, category allworkers, Quarter 2
+{res}
+{smcl}
+{reset}{...}
+{hline 6}{c -}{c TT}{c -}{c -}{hline 8}
+Mean{space 2} {c |}  {result:1950.603}
+Median {c |}  {space 4}{result:1200}
+{hline 6}{c -}{c BT}{c -}{c -}{hline 8}
+Mean wage, category unlicensed, Quarter 2
+{res}
+{smcl}
+{reset}{...}
+{hline 6}{c -}{c TT}{c -}{c -}{hline 8}
+Mean{space 2} {c |}  {result:1791.212}
+Median {c |}  {space 4}{result:1200}
+{hline 6}{c -}{c BT}{c -}{c -}{hline 8}
+Mean wage, category minreq, Quarter 2
+{res}
+{smcl}
+{reset}{...}
+{hline 6}{c -}{c TT}{c -}{c -}{hline 8}
+Mean{space 2} {c |}  {result:3034.654}
+Median {c |}  {space 4}{result:1800}
+{hline 6}{c -}{c BT}{c -}{c -}{hline 8}
+Mean wage, category licensed_t, Quarter 2
+{res}
+{smcl}
+{reset}{...}
+{hline 6}{c -}{c TT}{c -}{c -}{hline 8}
+Mean{space 2} {c |}  {result:3332.564}
+Median {c |}  {space 4}{result:2000}
+{hline 6}{c -}{c BT}{c -}{c -}{hline 8}
+% of Workforce in category, Quarter 3
+{res}
+{smcl}
+{reset}{...}
+{hline 10}{c -}{c TT}{c -}{c -}{hline 8}
+regulated{space 1} {c |}  {result:.2074321}
+minreq{space 4} {c |}  {result:.1300652}
+licensed_t {c |}  {result:.1120313}
+{hline 10}{c -}{c BT}{c -}{c -}{hline 8}
+Mean wage, category allworkers, Quarter 3
+{res}
+{smcl}
+{reset}{...}
+{hline 6}{c -}{c TT}{c -}{c -}{hline 8}
+Mean{space 2} {c |}  {result:1993.845}
+Median {c |}  {space 4}{result:1200}
+{hline 6}{c -}{c BT}{c -}{c -}{hline 8}
+Mean wage, category unlicensed, Quarter 3
+{res}
+{smcl}
+{reset}{...}
+{hline 6}{c -}{c TT}{c -}{c -}{hline 8}
+Mean{space 2} {c |}  {result:1825.781}
+Median {c |}  {space 4}{result:1200}
+{hline 6}{c -}{c BT}{c -}{c -}{hline 8}
+Mean wage, category minreq, Quarter 3
+{res}
+{smcl}
+{reset}{...}
+{hline 6}{c -}{c TT}{c -}{c -}{hline 8}
+Mean{space 2} {c |}  {result:3117.807}
+Median {c |}  {space 4}{result:1800}
+{hline 6}{c -}{c BT}{c -}{c -}{hline 8}
+Mean wage, category licensed_t, Quarter 3
+{res}
+{smcl}
+{reset}{...}
+{hline 6}{c -}{c TT}{c -}{c -}{hline 8}
+Mean{space 2} {c |}  {result:3428.929}
+Median {c |}  {space 4}{result:2000}
+{hline 6}{c -}{c BT}{c -}{c -}{hline 8}
+% of Workforce in category, Quarter 4
+{res}
+{smcl}
+{reset}{...}
+{hline 10}{c -}{c TT}{c -}{c -}{hline 8}
+regulated{space 1} {c |}  {result:.2070982}
+minreq{space 4} {c |}  {result:.1277813}
+licensed_t {c |}  {result:.1092715}
+{hline 10}{c -}{c BT}{c -}{c -}{hline 8}
+Mean wage, category allworkers, Quarter 4
+{res}
+{smcl}
+{reset}{...}
+{hline 6}{c -}{c TT}{c -}{c -}{hline 8}
+Mean{space 2} {c |}  {result:2080.176}
+Median {c |}  {space 4}{result:1300}
+{hline 6}{c -}{c BT}{c -}{c -}{hline 8}
+Mean wage, category unlicensed, Quarter 4
+{res}
+{smcl}
+{reset}{...}
+{hline 6}{c -}{c TT}{c -}{c -}{hline 8}
+Mean{space 2} {c |}  {result:1910.609}
+Median {c |}  {space 4}{result:1200}
+{hline 6}{c -}{c BT}{c -}{c -}{hline 8}
+Mean wage, category minreq, Quarter 4
+{res}
+{smcl}
+{reset}{...}
+{hline 6}{c -}{c TT}{c -}{c -}{hline 8}
+Mean{space 2} {c |}  {result:3237.455}
+Median {c |}  {space 4}{result:1900}
+{hline 6}{c -}{c BT}{c -}{c -}{hline 8}
+Mean wage, category licensed_t, Quarter 4
+{res}
+{smcl}
+{reset}{...}
+{hline 6}{c -}{c TT}{c -}{c -}{hline 8}
+Mean{space 2} {c |}  {result:3580.923}
+Median {c |}  {space 4}{result:2000}
+{hline 6}{c -}{c BT}{c -}{c -}{hline 8}
+      name:  {res}<unnamed>
+       {txt}log:  {res}/Users/jpmvbastos/Documents/GitHub/OccupationalLicensingBR/Data/Results/2016.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res} 5 Oct 2024, 21:16:42
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}
