@@ -46,4 +46,206 @@ end of do-file
 Mean {c |}  {result:.0000102}
 {hline 4}{c -}{c BT}{c -}{c -}{hline 8}
 
+{com}. use "/Users/jpmvbastos/Library/CloudStorage/OneDrive-TexasTechUniversity/Personal/Projects/Papers/Gender and Corruption in Firms/Stata/GenderCorruption_Data_Final.dta", clear
+
+. logit female_owner i.firm_size i.country i.year i.sector age ln_employees exp informal 
+
+{res}{txt}Iteration 0:{space 2}Log likelihood = {res:-90622.766}  
+Iteration 1:{space 2}Log likelihood = {res:-83765.666}  
+Iteration 2:{space 2}Log likelihood = {res:-83564.068}  
+Iteration 3:{space 2}Log likelihood = {res:-83558.858}  
+Iteration 4:{space 2}Log likelihood = {res:-83558.803}  
+Iteration 5:{space 2}Log likelihood = {res:-83558.803}  
+{res}
+{txt}{col 1}Logistic regression{col 55}{lalign 13:Number of obs}{col 68} = {res}{ralign 8:141,912}
+{txt}{col 55}{lalign 13:LR chi2({res:163})}{col 68} = {res}{ralign 8:14127.92}
+{txt}{col 55}{lalign 13:Prob > chi2}{col 68} = {res}{ralign 8:0.0000}
+{txt}{col 1}{lalign 14:Log likelihood}{col 15} = {res}{ralign 10:-83558.803}{txt}{col 55}{lalign 13:Pseudo R2}{col 68} = {res}{ralign 8:0.0779}
+
+{txt}{hline 34}{c TT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{col 1}                     female_owner{col 35}{c |} Coefficient{col 47}  Std. err.{col 59}      z{col 67}   P>|z|{col 75}     [95% con{col 88}f. interval]
+{hline 34}{c +}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+{space 24}firm_size {c |}
+{space 19}Medium(20-99)  {c |}{col 35}{res}{space 2} -.056399{col 47}{space 2}  .025935{col 58}{space 1}   -2.17{col 67}{space 3}0.030{col 75}{space 4}-.1072306{col 88}{space 3}-.0055674
+{txt}{space 22}Small(<20)  {c |}{col 35}{res}{space 2}-.0637019{col 47}{space 2} .0388071{col 58}{space 1}   -1.64{col 67}{space 3}0.101{col 75}{space 4}-.1397624{col 88}{space 3} .0123585
+{txt}{space 33} {c |}
+{space 26}country {c |}
+{space 25}Albania  {c |}{col 35}{res}{space 2} 2.172826{col 47}{space 2} .2209878{col 58}{space 1}    9.83{col 67}{space 3}0.000{col 75}{space 4} 1.739698{col 88}{space 3} 2.605954
+{txt}{space 26}Angola  {c |}{col 35}{res}{space 2} 2.592633{col 47}{space 2} .2367779{col 58}{space 1}   10.95{col 67}{space 3}0.000{col 75}{space 4} 2.128557{col 88}{space 3} 3.056709
+{txt}{space 15}Antiguaandbarbuda  {c |}{col 35}{res}{space 2} 2.386002{col 47}{space 2} .2988187{col 58}{space 1}    7.98{col 67}{space 3}0.000{col 75}{space 4} 1.800328{col 88}{space 3} 2.971676
+{txt}{space 23}Argentina  {c |}{col 35}{res}{space 2} 2.936238{col 47}{space 2} .2124791{col 58}{space 1}   13.82{col 67}{space 3}0.000{col 75}{space 4} 2.519787{col 88}{space 3} 3.352689
+{txt}{space 25}Armenia  {c |}{col 35}{res}{space 2}   2.8298{col 47}{space 2} .2194257{col 58}{space 1}   12.90{col 67}{space 3}0.000{col 75}{space 4} 2.399734{col 88}{space 3} 3.259866
+{txt}{space 22}Azerbaijan  {c |}{col 35}{res}{space 2} 1.593566{col 47}{space 2} .2314229{col 58}{space 1}    6.89{col 67}{space 3}0.000{col 75}{space 4} 1.139985{col 88}{space 3} 2.047146
+{txt}{space 25}Bahamas  {c |}{col 35}{res}{space 2} 4.024934{col 47}{space 2} .2710851{col 58}{space 1}   14.85{col 67}{space 3}0.000{col 75}{space 4} 3.493617{col 88}{space 3} 4.556251
+{txt}{space 22}Bangladesh  {c |}{col 35}{res}{space 2} 2.268529{col 47}{space 2} .2091139{col 58}{space 1}   10.85{col 67}{space 3}0.000{col 75}{space 4} 1.858673{col 88}{space 3} 2.678385
+{txt}{space 24}Barbados  {c |}{col 35}{res}{space 2}  3.48479{col 47}{space 2} .2710992{col 58}{space 1}   12.85{col 67}{space 3}0.000{col 75}{space 4} 2.953446{col 88}{space 3} 4.016135
+{txt}{space 25}Belarus  {c |}{col 35}{res}{space 2} 3.504894{col 47}{space 2}  .211868{col 58}{space 1}   16.54{col 67}{space 3}0.000{col 75}{space 4}  3.08964{col 88}{space 3} 3.920148
+{txt}{space 26}Belize  {c |}{col 35}{res}{space 2} 2.844779{col 47}{space 2} .2792263{col 58}{space 1}   10.19{col 67}{space 3}0.000{col 75}{space 4} 2.297505{col 88}{space 3} 3.392052
+{txt}{space 27}Benin  {c |}{col 35}{res}{space 2} 3.057943{col 47}{space 2} .2707087{col 58}{space 1}   11.30{col 67}{space 3}0.000{col 75}{space 4} 2.527363{col 88}{space 3} 3.588522
+{txt}{space 26}Bhutan  {c |}{col 35}{res}{space 2} 3.207661{col 47}{space 2} .2261316{col 58}{space 1}   14.18{col 67}{space 3}0.000{col 75}{space 4} 2.764451{col 88}{space 3} 3.650871
+{txt}{space 25}Bolivia  {c |}{col 35}{res}{space 2} 3.487828{col 47}{space 2} .2172668{col 58}{space 1}   16.05{col 67}{space 3}0.000{col 75}{space 4} 3.061993{col 88}{space 3} 3.913663
+{txt}{space 10}Bosnia and Herzegovina  {c |}{col 35}{res}{space 2} 2.919532{col 47}{space 2} .2142722{col 58}{space 1}   13.63{col 67}{space 3}0.000{col 75}{space 4} 2.499566{col 88}{space 3} 3.339498
+{txt}{space 24}Botswana  {c |}{col 35}{res}{space 2}  3.50316{col 47}{space 2} .2346847{col 58}{space 1}   14.93{col 67}{space 3}0.000{col 75}{space 4} 3.043186{col 88}{space 3} 3.963133
+{txt}{space 26}Brazil  {c |}{col 35}{res}{space 2} 3.801507{col 47}{space 2}  .213256{col 58}{space 1}   17.83{col 67}{space 3}0.000{col 75}{space 4} 3.383533{col 88}{space 3} 4.219481
+{txt}{space 24}Bulgaria  {c |}{col 35}{res}{space 2} 3.315046{col 47}{space 2} .2076833{col 58}{space 1}   15.96{col 67}{space 3}0.000{col 75}{space 4} 2.907995{col 88}{space 3} 3.722098
+{txt}{space 25}Burundi  {c |}{col 35}{res}{space 2} 3.117661{col 47}{space 2}  .228764{col 58}{space 1}   13.63{col 67}{space 3}0.000{col 75}{space 4} 2.669292{col 88}{space 3}  3.56603
+{txt}{space 24}Cambodia  {c |}{col 35}{res}{space 2} 3.449105{col 47}{space 2} .2340283{col 58}{space 1}   14.74{col 67}{space 3}0.000{col 75}{space 4} 2.990418{col 88}{space 3} 3.907792
+{txt}{space 24}Cameroon  {c |}{col 35}{res}{space 2} 3.047309{col 47}{space 2} .2380357{col 58}{space 1}   12.80{col 67}{space 3}0.000{col 75}{space 4} 2.580767{col 88}{space 3}  3.51385
+{txt}{space 8}Central African Republic  {c |}{col 35}{res}{space 2} 3.586086{col 47}{space 2} .2733557{col 58}{space 1}   13.12{col 67}{space 3}0.000{col 75}{space 4} 3.050318{col 88}{space 3} 4.121853
+{txt}{space 28}Chad  {c |}{col 35}{res}{space 2} 1.890257{col 47}{space 2} .3151998{col 58}{space 1}    6.00{col 67}{space 3}0.000{col 75}{space 4} 1.272477{col 88}{space 3} 2.508037
+{txt}{space 27}Chile  {c |}{col 35}{res}{space 2}  2.77904{col 47}{space 2} .2152395{col 58}{space 1}   12.91{col 67}{space 3}0.000{col 75}{space 4} 2.357179{col 88}{space 3} 3.200902
+{txt}{space 27}China  {c |}{col 35}{res}{space 2} 4.304902{col 47}{space 2} .2149225{col 58}{space 1}   20.03{col 67}{space 3}0.000{col 75}{space 4} 3.883661{col 88}{space 3} 4.726142
+{txt}{space 24}Colombia  {c |}{col 35}{res}{space 2} 3.505369{col 47}{space 2} .2120512{col 58}{space 1}   16.53{col 67}{space 3}0.000{col 75}{space 4} 3.089756{col 88}{space 3} 3.920981
+{txt}{space 27}Congo  {c |}{col 35}{res}{space 2} 2.878208{col 47}{space 2} .4485344{col 58}{space 1}    6.42{col 67}{space 3}0.000{col 75}{space 4} 1.999096{col 88}{space 3} 3.757319
+{txt}{space 22}Costa Rica  {c |}{col 35}{res}{space 2}  3.08094{col 47}{space 2} .2321872{col 58}{space 1}   13.27{col 67}{space 3}0.000{col 75}{space 4} 2.625861{col 88}{space 3} 3.536018
+{txt}{space 25}Croatia  {c |}{col 35}{res}{space 2} 3.083782{col 47}{space 2} .2111771{col 58}{space 1}   14.60{col 67}{space 3}0.000{col 75}{space 4} 2.669882{col 88}{space 3} 3.497681
+{txt}{space 26}Cyprus  {c |}{col 35}{res}{space 2} 3.692442{col 47}{space 2} .2429314{col 58}{space 1}   15.20{col 67}{space 3}0.000{col 75}{space 4} 3.216305{col 88}{space 3} 4.168579
+{txt}{space 18}Czech Republic  {c |}{col 35}{res}{space 2} 2.977688{col 47}{space 2} .2151841{col 58}{space 1}   13.84{col 67}{space 3}0.000{col 75}{space 4} 2.555935{col 88}{space 3} 3.399441
+{txt}{space 18}CÃ´te d'Ivoire  {c |}{col 35}{res}{space 2}  2.60246{col 47}{space 2}  .243505{col 58}{space 1}   10.69{col 67}{space 3}0.000{col 75}{space 4} 2.125199{col 88}{space 3} 3.079721
+{txt}{space 29}DRC  {c |}{col 35}{res}{space 2} 2.217096{col 47}{space 2} .2232384{col 58}{space 1}    9.93{col 67}{space 3}0.000{col 75}{space 4} 1.779557{col 88}{space 3} 2.654635
+{txt}{space 24}Djibouti  {c |}{col 35}{res}{space 2} 2.572513{col 47}{space 2} .2552513{col 58}{space 1}   10.08{col 67}{space 3}0.000{col 75}{space 4}  2.07223{col 88}{space 3} 3.072796
+{txt}{space 24}Dominica  {c |}{col 35}{res}{space 2} 3.438256{col 47}{space 2} .2686585{col 58}{space 1}   12.80{col 67}{space 3}0.000{col 75}{space 4} 2.911695{col 88}{space 3} 3.964817
+{txt}{space 14}Dominican Republic  {c |}{col 35}{res}{space 2}  2.87557{col 47}{space 2} .2225986{col 58}{space 1}   12.92{col 67}{space 3}0.000{col 75}{space 4} 2.439285{col 88}{space 3} 3.311855
+{txt}{space 25}Ecuador  {c |}{col 35}{res}{space 2} 3.086335{col 47}{space 2} .2179708{col 58}{space 1}   14.16{col 67}{space 3}0.000{col 75}{space 4}  2.65912{col 88}{space 3} 3.513549
+{txt}{space 27}Egypt  {c |}{col 35}{res}{space 2} 2.468332{col 47}{space 2}   .20691{col 58}{space 1}   11.93{col 67}{space 3}0.000{col 75}{space 4} 2.062796{col 88}{space 3} 2.873868
+{txt}{space 21}El Salvador  {c |}{col 35}{res}{space 2} 3.224721{col 47}{space 2} .2133955{col 58}{space 1}   15.11{col 67}{space 3}0.000{col 75}{space 4} 2.806473{col 88}{space 3} 3.642968
+{txt}{space 25}Estonia  {c |}{col 35}{res}{space 2} 3.514553{col 47}{space 2} .2149135{col 58}{space 1}   16.35{col 67}{space 3}0.000{col 75}{space 4}  3.09333{col 88}{space 3} 3.935776
+{txt}{space 24}Eswatini  {c |}{col 35}{res}{space 2} 2.851575{col 47}{space 2} .2318355{col 58}{space 1}   12.30{col 67}{space 3}0.000{col 75}{space 4} 2.397185{col 88}{space 3} 3.305964
+{txt}{space 24}Ethiopia  {c |}{col 35}{res}{space 2} 3.099043{col 47}{space 2} .2168231{col 58}{space 1}   14.29{col 67}{space 3}0.000{col 75}{space 4} 2.674078{col 88}{space 3} 3.524008
+{txt}{space 28}Fiji  {c |}{col 35}{res}{space 2} 3.664313{col 47}{space 2} .2660265{col 58}{space 1}   13.77{col 67}{space 3}0.000{col 75}{space 4} 3.142911{col 88}{space 3} 4.185716
+{txt}{space 27}Gabon  {c |}{col 35}{res}{space 2} 2.332989{col 47}{space 2}  .424752{col 58}{space 1}    5.49{col 67}{space 3}0.000{col 75}{space 4} 1.500491{col 88}{space 3} 3.165488
+{txt}{space 26}Gambia  {c |}{col 35}{res}{space 2} 2.425285{col 47}{space 2} .2478513{col 58}{space 1}    9.79{col 67}{space 3}0.000{col 75}{space 4} 1.939506{col 88}{space 3} 2.911065
+{txt}{space 25}Georgia  {c |}{col 35}{res}{space 2} 2.988404{col 47}{space 2} .2106572{col 58}{space 1}   14.19{col 67}{space 3}0.000{col 75}{space 4} 2.575524{col 88}{space 3} 3.401285
+{txt}{space 27}Ghana  {c |}{col 35}{res}{space 2} 3.242404{col 47}{space 2} .2120114{col 58}{space 1}   15.29{col 67}{space 3}0.000{col 75}{space 4} 2.826869{col 88}{space 3} 3.657939
+{txt}{space 26}Greece  {c |}{col 35}{res}{space 2} 3.668054{col 47}{space 2} .2257273{col 58}{space 1}   16.25{col 67}{space 3}0.000{col 75}{space 4} 3.225636{col 88}{space 3} 4.110471
+{txt}{space 25}Grenada  {c |}{col 35}{res}{space 2} 4.132552{col 47}{space 2} .2699915{col 58}{space 1}   15.31{col 67}{space 3}0.000{col 75}{space 4} 3.603378{col 88}{space 3} 4.661725
+{txt}{space 23}Guatemala  {c |}{col 35}{res}{space 2} 2.571087{col 47}{space 2}  .218362{col 58}{space 1}   11.77{col 67}{space 3}0.000{col 75}{space 4} 2.143105{col 88}{space 3} 2.999069
+{txt}{space 26}Guinea  {c |}{col 35}{res}{space 2} 2.382088{col 47}{space 2}   .24388{col 58}{space 1}    9.77{col 67}{space 3}0.000{col 75}{space 4} 1.904092{col 88}{space 3} 2.860084
+{txt}{space 20}GuineaBissau  {c |}{col 35}{res}{space 2} 2.191412{col 47}{space 2} .2925954{col 58}{space 1}    7.49{col 67}{space 3}0.000{col 75}{space 4} 1.617936{col 88}{space 3} 2.764888
+{txt}{space 26}Guyana  {c |}{col 35}{res}{space 2} 4.145287{col 47}{space 2} .2632402{col 58}{space 1}   15.75{col 67}{space 3}0.000{col 75}{space 4} 3.629345{col 88}{space 3} 4.661228
+{txt}{space 24}Honduras  {c |}{col 35}{res}{space 2}  3.36598{col 47}{space 2} .2176622{col 58}{space 1}   15.46{col 67}{space 3}0.000{col 75}{space 4}  2.93937{col 88}{space 3}  3.79259
+{txt}{space 25}Hungary  {c |}{col 35}{res}{space 2} 3.735312{col 47}{space 2} .2105641{col 58}{space 1}   17.74{col 67}{space 3}0.000{col 75}{space 4} 3.322614{col 88}{space 3}  4.14801
+{txt}{space 27}India  {c |}{col 35}{res}{space 2} 1.923348{col 47}{space 2} .2084936{col 58}{space 1}    9.22{col 67}{space 3}0.000{col 75}{space 4} 1.514708{col 88}{space 3} 2.331988
+{txt}{space 23}Indonesia  {c |}{col 35}{res}{space 2} 2.954702{col 47}{space 2} .2108967{col 58}{space 1}   14.01{col 67}{space 3}0.000{col 75}{space 4} 2.541352{col 88}{space 3} 3.368052
+{txt}{space 28}Iraq  {c |}{col 35}{res}{space 2} .9134046{col 47}{space 2} .2612563{col 58}{space 1}    3.50{col 67}{space 3}0.000{col 75}{space 4} .4013518{col 88}{space 3} 1.425457
+{txt}{space 26}Israel  {c |}{col 35}{res}{space 2} 2.780381{col 47}{space 2} .2275168{col 58}{space 1}   12.22{col 67}{space 3}0.000{col 75}{space 4} 2.334457{col 88}{space 3} 3.226306
+{txt}{space 27}Italy  {c |}{col 35}{res}{space 2} 2.556721{col 47}{space 2} .2226363{col 58}{space 1}   11.48{col 67}{space 3}0.000{col 75}{space 4} 2.120362{col 88}{space 3}  2.99308
+{txt}{space 25}Jamaica  {c |}{col 35}{res}{space 2} 3.220903{col 47}{space 2} .2401454{col 58}{space 1}   13.41{col 67}{space 3}0.000{col 75}{space 4} 2.750226{col 88}{space 3} 3.691579
+{txt}{space 26}Jordan  {c |}{col 35}{res}{space 2} 2.379221{col 47}{space 2} .2182531{col 58}{space 1}   10.90{col 67}{space 3}0.000{col 75}{space 4} 1.951453{col 88}{space 3} 2.806989
+{txt}{space 22}Kazakhstan  {c |}{col 35}{res}{space 2} 3.144504{col 47}{space 2} .2078895{col 58}{space 1}   15.13{col 67}{space 3}0.000{col 75}{space 4} 2.737048{col 88}{space 3}  3.55196
+{txt}{space 27}Kenya  {c |}{col 35}{res}{space 2} 3.347777{col 47}{space 2} .2084898{col 58}{space 1}   16.06{col 67}{space 3}0.000{col 75}{space 4} 2.939145{col 88}{space 3}  3.75641
+{txt}{space 26}Kosovo  {c |}{col 35}{res}{space 2} 1.677444{col 47}{space 2} .2388125{col 58}{space 1}    7.02{col 67}{space 3}0.000{col 75}{space 4}  1.20938{col 88}{space 3} 2.145508
+{txt}{space 22}Kyrgyzstan  {c |}{col 35}{res}{space 2} 3.876598{col 47}{space 2} .2147163{col 58}{space 1}   18.05{col 67}{space 3}0.000{col 75}{space 4} 3.455762{col 88}{space 3} 4.297434
+{txt}{space 28}Laos  {c |}{col 35}{res}{space 2} 3.158524{col 47}{space 2} .2127346{col 58}{space 1}   14.85{col 67}{space 3}0.000{col 75}{space 4} 2.741572{col 88}{space 3} 3.575476
+{txt}{space 26}Latvia  {c |}{col 35}{res}{space 2} 3.563602{col 47}{space 2} .2142853{col 58}{space 1}   16.63{col 67}{space 3}0.000{col 75}{space 4}  3.14361{col 88}{space 3} 3.983593
+{txt}{space 25}Lebanon  {c |}{col 35}{res}{space 2} 2.624308{col 47}{space 2} .2152502{col 58}{space 1}   12.19{col 67}{space 3}0.000{col 75}{space 4} 2.202425{col 88}{space 3}  3.04619
+{txt}{space 25}Lesotho  {c |}{col 35}{res}{space 2} 3.280051{col 47}{space 2} .2504324{col 58}{space 1}   13.10{col 67}{space 3}0.000{col 75}{space 4} 2.789213{col 88}{space 3}  3.77089
+{txt}{space 25}Liberia  {c |}{col 35}{res}{space 2} 2.145586{col 47}{space 2} .2668874{col 58}{space 1}    8.04{col 67}{space 3}0.000{col 75}{space 4} 1.622497{col 88}{space 3} 2.668676
+{txt}{space 23}Lithuania  {c |}{col 35}{res}{space 2} 3.435616{col 47}{space 2} .2147306{col 58}{space 1}   16.00{col 67}{space 3}0.000{col 75}{space 4} 3.014752{col 88}{space 3}  3.85648
+{txt}{space 26}Malawi  {c |}{col 35}{res}{space 2} 2.804095{col 47}{space 2}  .229834{col 58}{space 1}   12.20{col 67}{space 3}0.000{col 75}{space 4} 2.353628{col 88}{space 3} 3.254561
+{txt}{space 24}Malaysia  {c |}{col 35}{res}{space 2} 3.328532{col 47}{space 2} .2212177{col 58}{space 1}   15.05{col 67}{space 3}0.000{col 75}{space 4} 2.894953{col 88}{space 3}  3.76211
+{txt}{space 28}Mali  {c |}{col 35}{res}{space 2} 2.065362{col 47}{space 2} .2461216{col 58}{space 1}    8.39{col 67}{space 3}0.000{col 75}{space 4} 1.582972{col 88}{space 3} 2.547751
+{txt}{space 27}Malta  {c |}{col 35}{res}{space 2} 3.751521{col 47}{space 2} .2422204{col 58}{space 1}   15.49{col 67}{space 3}0.000{col 75}{space 4} 3.276778{col 88}{space 3} 4.226265
+{txt}{space 22}Mauritania  {c |}{col 35}{res}{space 2} 2.124815{col 47}{space 2} .2469634{col 58}{space 1}    8.60{col 67}{space 3}0.000{col 75}{space 4} 1.640775{col 88}{space 3} 2.608854
+{txt}{space 26}Mexico  {c |}{col 35}{res}{space 2} 2.618657{col 47}{space 2} .2130084{col 58}{space 1}   12.29{col 67}{space 3}0.000{col 75}{space 4} 2.201169{col 88}{space 3} 3.036146
+{txt}{space 22}Micronesia  {c |}{col 35}{res}{space 2} 5.559502{col 47}{space 2} .4136954{col 58}{space 1}   13.44{col 67}{space 3}0.000{col 75}{space 4} 4.748673{col 88}{space 3}  6.37033
+{txt}{space 25}Moldova  {c |}{col 35}{res}{space 2} 3.867232{col 47}{space 2} .2128242{col 58}{space 1}   18.17{col 67}{space 3}0.000{col 75}{space 4} 3.450104{col 88}{space 3}  4.28436
+{txt}{space 24}Mongolia  {c |}{col 35}{res}{space 2} 3.759319{col 47}{space 2}  .212419{col 58}{space 1}   17.70{col 67}{space 3}0.000{col 75}{space 4} 3.342986{col 88}{space 3} 4.175653
+{txt}{space 22}Montenegro  {c |}{col 35}{res}{space 2} 2.710367{col 47}{space 2} .2344053{col 58}{space 1}   11.56{col 67}{space 3}0.000{col 75}{space 4} 2.250941{col 88}{space 3} 3.169793
+{txt}{space 25}Morocco  {c |}{col 35}{res}{space 2} 2.537679{col 47}{space 2} .2147762{col 58}{space 1}   11.82{col 67}{space 3}0.000{col 75}{space 4} 2.116726{col 88}{space 3} 2.958633
+{txt}{space 22}Mozambique  {c |}{col 35}{res}{space 2} 2.604692{col 47}{space 2} .2193454{col 58}{space 1}   11.87{col 67}{space 3}0.000{col 75}{space 4} 2.174782{col 88}{space 3} 3.034601
+{txt}{space 25}Myanmar  {c |}{col 35}{res}{space 2} 2.703356{col 47}{space 2}  .214295{col 58}{space 1}   12.62{col 67}{space 3}0.000{col 75}{space 4} 2.283346{col 88}{space 3} 3.123367
+{txt}{space 25}Namibia  {c |}{col 35}{res}{space 2} 3.277462{col 47}{space 2} .2159467{col 58}{space 1}   15.18{col 67}{space 3}0.000{col 75}{space 4} 2.854215{col 88}{space 3}  3.70071
+{txt}{space 27}Nepal  {c |}{col 35}{res}{space 2} 2.641247{col 47}{space 2} .2182393{col 58}{space 1}   12.10{col 67}{space 3}0.000{col 75}{space 4} 2.213506{col 88}{space 3} 3.068988
+{txt}{space 23}Nicaragua  {c |}{col 35}{res}{space 2} 3.391135{col 47}{space 2} .2174374{col 58}{space 1}   15.60{col 67}{space 3}0.000{col 75}{space 4} 2.964965{col 88}{space 3} 3.817304
+{txt}{space 27}Niger  {c |}{col 35}{res}{space 2} .9923145{col 47}{space 2} .3253464{col 58}{space 1}    3.05{col 67}{space 3}0.002{col 75}{space 4} .3546472{col 88}{space 3} 1.629982
+{txt}{space 25}Nigeria  {c |}{col 35}{res}{space 2} 2.262765{col 47}{space 2} .2074083{col 58}{space 1}   10.91{col 67}{space 3}0.000{col 75}{space 4} 1.856252{col 88}{space 3} 2.669277
+{txt}{space 17}North Macedonia  {c |}{col 35}{res}{space 2} 3.050064{col 47}{space 2} .2136983{col 58}{space 1}   14.27{col 67}{space 3}0.000{col 75}{space 4} 2.631223{col 88}{space 3} 3.468905
+{txt}{space 24}Pakistan  {c |}{col 35}{res}{space 2}  1.52622{col 47}{space 2} .2174507{col 58}{space 1}    7.02{col 67}{space 3}0.000{col 75}{space 4} 1.100024{col 88}{space 3} 1.952415
+{txt}{space 26}Panama  {c |}{col 35}{res}{space 2} 2.721794{col 47}{space 2} .2296812{col 58}{space 1}   11.85{col 67}{space 3}0.000{col 75}{space 4} 2.271627{col 88}{space 3} 3.171961
+{txt}{space 16}Papua New Guinea  {c |}{col 35}{res}{space 2} 3.537445{col 47}{space 2} .3277725{col 58}{space 1}   10.79{col 67}{space 3}0.000{col 75}{space 4} 2.895023{col 88}{space 3} 4.179867
+{txt}{space 24}Paraguay  {c |}{col 35}{res}{space 2} 3.583732{col 47}{space 2}  .218759{col 58}{space 1}   16.38{col 67}{space 3}0.000{col 75}{space 4} 3.154972{col 88}{space 3} 4.012492
+{txt}{space 28}Peru  {c |}{col 35}{res}{space 2} 2.852295{col 47}{space 2} .2132374{col 58}{space 1}   13.38{col 67}{space 3}0.000{col 75}{space 4} 2.434358{col 88}{space 3} 3.270233
+{txt}{space 21}Philippines  {c |}{col 35}{res}{space 2} 4.404574{col 47}{space 2} .2115093{col 58}{space 1}   20.82{col 67}{space 3}0.000{col 75}{space 4} 3.990024{col 88}{space 3} 4.819125
+{txt}{space 26}Poland  {c |}{col 35}{res}{space 2} 3.520061{col 47}{space 2} .2086291{col 58}{space 1}   16.87{col 67}{space 3}0.000{col 75}{space 4} 3.111156{col 88}{space 3} 3.928967
+{txt}{space 24}Portugal  {c |}{col 35}{res}{space 2}  3.63484{col 47}{space 2} .2135009{col 58}{space 1}   17.02{col 67}{space 3}0.000{col 75}{space 4} 3.216386{col 88}{space 3} 4.053295
+{txt}{space 25}Romania  {c |}{col 35}{res}{space 2} 3.481991{col 47}{space 2} .2089468{col 58}{space 1}   16.66{col 67}{space 3}0.000{col 75}{space 4} 3.072463{col 88}{space 3} 3.891519
+{txt}{space 26}Russia  {c |}{col 35}{res}{space 2}  3.13601{col 47}{space 2} .2082562{col 58}{space 1}   15.06{col 67}{space 3}0.000{col 75}{space 4} 2.727836{col 88}{space 3} 3.544185
+{txt}{space 26}Rwanda  {c |}{col 35}{res}{space 2}  3.19086{col 47}{space 2} .2182289{col 58}{space 1}   14.62{col 67}{space 3}0.000{col 75}{space 4} 2.763139{col 88}{space 3} 3.618581
+{txt}{space 21}Saint Lucia  {c |}{col 35}{res}{space 2} 3.169183{col 47}{space 2} .2723148{col 58}{space 1}   11.64{col 67}{space 3}0.000{col 75}{space 4} 2.635456{col 88}{space 3}  3.70291
+{txt}Saint Vincent and the Grenadines  {c |}{col 35}{res}{space 2} 4.940335{col 47}{space 2} .2846687{col 58}{space 1}   17.35{col 67}{space 3}0.000{col 75}{space 4} 4.382395{col 88}{space 3} 5.498275
+{txt}{space 27}Samoa  {c |}{col 35}{res}{space 2} 5.102622{col 47}{space 2} .3281065{col 58}{space 1}   15.55{col 67}{space 3}0.000{col 75}{space 4} 4.459545{col 88}{space 3} 5.745699
+{txt}{space 25}Senegal  {c |}{col 35}{res}{space 2} 2.165409{col 47}{space 2} .2228038{col 58}{space 1}    9.72{col 67}{space 3}0.000{col 75}{space 4} 1.728721{col 88}{space 3} 2.602096
+{txt}{space 26}Serbia  {c |}{col 35}{res}{space 2} 3.080023{col 47}{space 2} .2135049{col 58}{space 1}   14.43{col 67}{space 3}0.000{col 75}{space 4} 2.661561{col 88}{space 3} 3.498484
+{txt}{space 20}Sierra Leone  {c |}{col 35}{res}{space 2} 1.436322{col 47}{space 2} .2854414{col 58}{space 1}    5.03{col 67}{space 3}0.000{col 75}{space 4} .8768672{col 88}{space 3} 1.995777
+{txt}{space 24}Slovakia  {c |}{col 35}{res}{space 2} 3.170813{col 47}{space 2} .2150566{col 58}{space 1}   14.74{col 67}{space 3}0.000{col 75}{space 4}  2.74931{col 88}{space 3} 3.592316
+{txt}{space 24}Slovenia  {c |}{col 35}{res}{space 2} 3.502783{col 47}{space 2} .2142672{col 58}{space 1}   16.35{col 67}{space 3}0.000{col 75}{space 4} 3.082827{col 88}{space 3} 3.922739
+{txt}{space 17}Solomon Islands  {c |}{col 35}{res}{space 2} 3.779545{col 47}{space 2} .2679672{col 58}{space 1}   14.10{col 67}{space 3}0.000{col 75}{space 4} 3.254339{col 88}{space 3} 4.304751
+{txt}{space 20}South Africa  {c |}{col 35}{res}{space 2} 2.344961{col 47}{space 2} .2223907{col 58}{space 1}   10.54{col 67}{space 3}0.000{col 75}{space 4} 1.909083{col 88}{space 3} 2.780839
+{txt}{space 22}Southsudan  {c |}{col 35}{res}{space 2} 2.413002{col 47}{space 2} .2262565{col 58}{space 1}   10.66{col 67}{space 3}0.000{col 75}{space 4} 1.969547{col 88}{space 3} 2.856456
+{txt}{space 23}Sri Lanka  {c |}{col 35}{res}{space 2} 2.643587{col 47}{space 2} .2353683{col 58}{space 1}   11.23{col 67}{space 3}0.000{col 75}{space 4} 2.182274{col 88}{space 3} 3.104901
+{txt}{space 17}StKittsandNevis  {c |}{col 35}{res}{space 2} 4.275915{col 47}{space 2} .2711841{col 58}{space 1}   15.77{col 67}{space 3}0.000{col 75}{space 4} 3.744404{col 88}{space 3} 4.807426
+{txt}{space 27}Sudan  {c |}{col 35}{res}{space 2}  1.17189{col 47}{space 2} .2546475{col 58}{space 1}    4.60{col 67}{space 3}0.000{col 75}{space 4} .6727905{col 88}{space 3}  1.67099
+{txt}{space 24}Suriname  {c |}{col 35}{res}{space 2} 2.823459{col 47}{space 2}  .236465{col 58}{space 1}   11.94{col 67}{space 3}0.000{col 75}{space 4} 2.359996{col 88}{space 3} 3.286922
+{txt}{space 26}Sweden  {c |}{col 35}{res}{space 2} 3.426953{col 47}{space 2}  .224369{col 58}{space 1}   15.27{col 67}{space 3}0.000{col 75}{space 4} 2.987198{col 88}{space 3} 3.866708
+{txt}{space 22}Tajikistan  {c |}{col 35}{res}{space 2} 2.721785{col 47}{space 2} .2135354{col 58}{space 1}   12.75{col 67}{space 3}0.000{col 75}{space 4} 2.303264{col 88}{space 3} 3.140307
+{txt}{space 24}Tanzania  {c |}{col 35}{res}{space 2} 2.656487{col 47}{space 2} .2157947{col 58}{space 1}   12.31{col 67}{space 3}0.000{col 75}{space 4} 2.233537{col 88}{space 3} 3.079437
+{txt}{space 24}Thailand  {c |}{col 35}{res}{space 2} 4.309632{col 47}{space 2} .2216752{col 58}{space 1}   19.44{col 67}{space 3}0.000{col 75}{space 4} 3.875156{col 88}{space 3} 4.744107
+{txt}{space 21}Timor-Leste  {c |}{col 35}{res}{space 2} 3.893788{col 47}{space 2} .2394565{col 58}{space 1}   16.26{col 67}{space 3}0.000{col 75}{space 4} 3.424462{col 88}{space 3} 4.363114
+{txt}{space 28}Togo  {c |}{col 35}{res}{space 2} 2.839087{col 47}{space 2} .2772782{col 58}{space 1}   10.24{col 67}{space 3}0.000{col 75}{space 4} 2.295631{col 88}{space 3} 3.382542
+{txt}{space 27}Tonga  {c |}{col 35}{res}{space 2} 4.393121{col 47}{space 2} .2693372{col 58}{space 1}   16.31{col 67}{space 3}0.000{col 75}{space 4}  3.86523{col 88}{space 3} 4.921012
+{txt}{space 13}Trinidad and Tobago  {c |}{col 35}{res}{space 2} 3.476484{col 47}{space 2} .2363206{col 58}{space 1}   14.71{col 67}{space 3}0.000{col 75}{space 4} 3.013304{col 88}{space 3} 3.939664
+{txt}{space 25}Tunisia  {c |}{col 35}{res}{space 2} 3.878707{col 47}{space 2} .2199924{col 58}{space 1}   17.63{col 67}{space 3}0.000{col 75}{space 4}  3.44753{col 88}{space 3} 4.309885
+{txt}{space 26}Turkey  {c |}{col 35}{res}{space 2} 2.665875{col 47}{space 2} .2047564{col 58}{space 1}   13.02{col 67}{space 3}0.000{col 75}{space 4}  2.26456{col 88}{space 3}  3.06719
+{txt}{space 26}Uganda  {c |}{col 35}{res}{space 2} 2.958363{col 47}{space 2} .2131761{col 58}{space 1}   13.88{col 67}{space 3}0.000{col 75}{space 4} 2.540546{col 88}{space 3} 3.376181
+{txt}{space 25}Ukraine  {c |}{col 35}{res}{space 2} 3.357949{col 47}{space 2} .2053553{col 58}{space 1}   16.35{col 67}{space 3}0.000{col 75}{space 4}  2.95546{col 88}{space 3} 3.760438
+{txt}{space 25}Uruguay  {c |}{col 35}{res}{space 2} 2.964069{col 47}{space 2} .2166342{col 58}{space 1}   13.68{col 67}{space 3}0.000{col 75}{space 4} 2.539474{col 88}{space 3} 3.388665
+{txt}{space 22}Uzbekistan  {c |}{col 35}{res}{space 2} 3.033719{col 47}{space 2} .2083324{col 58}{space 1}   14.56{col 67}{space 3}0.000{col 75}{space 4} 2.625395{col 88}{space 3} 3.442043
+{txt}{space 25}Vanuatu  {c |}{col 35}{res}{space 2} 3.787134{col 47}{space 2}  .271919{col 58}{space 1}   13.93{col 67}{space 3}0.000{col 75}{space 4} 3.254183{col 88}{space 3} 4.320086
+{txt}{space 23}Venezuela  {c |}{col 35}{res}{space 2}  3.09722{col 47}{space 2}  .244166{col 58}{space 1}   12.68{col 67}{space 3}0.000{col 75}{space 4} 2.618664{col 88}{space 3} 3.575777
+{txt}{space 25}Vietnam  {c |}{col 35}{res}{space 2} 3.746769{col 47}{space 2} .2109494{col 58}{space 1}   17.76{col 67}{space 3}0.000{col 75}{space 4} 3.333316{col 88}{space 3} 4.160222
+{txt}{space 14}West Bank And Gaza  {c |}{col 35}{res}{space 2} 1.843067{col 47}{space 2} .2315164{col 58}{space 1}    7.96{col 67}{space 3}0.000{col 75}{space 4} 1.389304{col 88}{space 3} 2.296831
+{txt}{space 27}Yemen  {c |}{col 35}{res}{space 2} 1.271861{col 47}{space 2} .2451971{col 58}{space 1}    5.19{col 67}{space 3}0.000{col 75}{space 4} .7912831{col 88}{space 3} 1.752438
+{txt}{space 26}Zambia  {c |}{col 35}{res}{space 2}  3.46531{col 47}{space 2} .2093411{col 58}{space 1}   16.55{col 67}{space 3}0.000{col 75}{space 4} 3.055009{col 88}{space 3} 3.875611
+{txt}{space 24}Zimbabwe  {c |}{col 35}{res}{space 2} 3.548039{col 47}{space 2}  .217525{col 58}{space 1}   16.31{col 67}{space 3}0.000{col 75}{space 4} 3.121698{col 88}{space 3}  3.97438
+{txt}{space 33} {c |}
+{space 29}year {c |}
+{space 28}2007  {c |}{col 35}{res}{space 2} .0032951{col 47}{space 2} .0585823{col 58}{space 1}    0.06{col 67}{space 3}0.955{col 75}{space 4}-.1115241{col 88}{space 3} .1181143
+{txt}{space 28}2008  {c |}{col 35}{res}{space 2} .4138278{col 47}{space 2} .0668583{col 58}{space 1}    6.19{col 67}{space 3}0.000{col 75}{space 4} .2827881{col 88}{space 3} .5448676
+{txt}{space 28}2009  {c |}{col 35}{res}{space 2} .0276671{col 47}{space 2} .0571726{col 58}{space 1}    0.48{col 67}{space 3}0.628{col 75}{space 4}-.0843891{col 88}{space 3} .1397232
+{txt}{space 28}2010  {c |}{col 35}{res}{space 2}-.1365002{col 47}{space 2}  .034051{col 58}{space 1}   -4.01{col 67}{space 3}0.000{col 75}{space 4}-.2032389{col 88}{space 3}-.0697615
+{txt}{space 28}2011  {c |}{col 35}{res}{space 2} .2420551{col 47}{space 2} .0878222{col 58}{space 1}    2.76{col 67}{space 3}0.006{col 75}{space 4} .0699267{col 88}{space 3} .4141835
+{txt}{space 28}2012  {c |}{col 35}{res}{space 2}-.2544201{col 47}{space 2} .0748251{col 58}{space 1}   -3.40{col 67}{space 3}0.001{col 75}{space 4}-.4010746{col 88}{space 3}-.1077656
+{txt}{space 28}2013  {c |}{col 35}{res}{space 2}-.1201103{col 47}{space 2} .0510921{col 58}{space 1}   -2.35{col 67}{space 3}0.019{col 75}{space 4}-.2202491{col 88}{space 3}-.0199715
+{txt}{space 28}2014  {c |}{col 35}{res}{space 2} -.042221{col 47}{space 2} .0675109{col 58}{space 1}   -0.63{col 67}{space 3}0.532{col 75}{space 4}  -.17454{col 88}{space 3} .0900979
+{txt}{space 28}2015  {c |}{col 35}{res}{space 2}-.0858738{col 47}{space 2} .0717175{col 58}{space 1}   -1.20{col 67}{space 3}0.231{col 75}{space 4}-.2264375{col 88}{space 3}   .05469
+{txt}{space 28}2016  {c |}{col 35}{res}{space 2}-.0563651{col 47}{space 2} .0505537{col 58}{space 1}   -1.11{col 67}{space 3}0.265{col 75}{space 4}-.1554485{col 88}{space 3} .0427183
+{txt}{space 28}2017  {c |}{col 35}{res}{space 2} .9059886{col 47}{space 2} .0430762{col 58}{space 1}   21.03{col 67}{space 3}0.000{col 75}{space 4} .8215608{col 88}{space 3} .9904163
+{txt}{space 28}2018  {c |}{col 35}{res}{space 2} .0065504{col 47}{space 2} .0709428{col 58}{space 1}    0.09{col 67}{space 3}0.926{col 75}{space 4}-.1324949{col 88}{space 3} .1455956
+{txt}{space 28}2019  {c |}{col 35}{res}{space 2}-.3065804{col 47}{space 2} .0545631{col 58}{space 1}   -5.62{col 67}{space 3}0.000{col 75}{space 4}-.4135221{col 88}{space 3}-.1996388
+{txt}{space 33} {c |}
+{space 27}sector {c |}
+{space 14}Food & Hospitality  {c |}{col 35}{res}{space 2} .7371823{col 47}{space 2} .0910875{col 58}{space 1}    8.09{col 67}{space 3}0.000{col 75}{space 4}  .558654{col 88}{space 3} .9157106
+{txt}{space 23}Logistics  {c |}{col 35}{res}{space 2} .4230294{col 47}{space 2}   .09974{col 58}{space 1}    4.24{col 67}{space 3}0.000{col 75}{space 4} .2275425{col 88}{space 3} .6185163
+{txt}{space 19}Manufacturing  {c |}{col 35}{res}{space 2} .2396165{col 47}{space 2}  .072315{col 58}{space 1}    3.31{col 67}{space 3}0.001{col 75}{space 4} .0978817{col 88}{space 3} .3813513
+{txt}{space 10}Mining & Petrochemical  {c |}{col 35}{res}{space 2}  .168004{col 47}{space 2} .0760695{col 58}{space 1}    2.21{col 67}{space 3}0.027{col 75}{space 4} .0189105{col 88}{space 3} .3170976
+{txt}{space 29}R&W  {c |}{col 35}{res}{space 2} .4687807{col 47}{space 2} .0730779{col 58}{space 1}    6.41{col 67}{space 3}0.000{col 75}{space 4} .3255507{col 88}{space 3} .6120108
+{txt}{space 24}Services  {c |}{col 35}{res}{space 2} .1575668{col 47}{space 2} .0732377{col 58}{space 1}    2.15{col 67}{space 3}0.031{col 75}{space 4} .0140236{col 88}{space 3} .3011101
+{txt}{space 33} {c |}
+{space 30}age {c |}{col 35}{res}{space 2} .0034145{col 47}{space 2} .0004216{col 58}{space 1}    8.10{col 67}{space 3}0.000{col 75}{space 4} .0025882{col 88}{space 3} .0042408
+{txt}{space 21}ln_employees {c |}{col 35}{res}{space 2} .0042779{col 47}{space 2} .0107202{col 58}{space 1}    0.40{col 67}{space 3}0.690{col 75}{space 4}-.0167333{col 88}{space 3} .0252891
+{txt}{space 30}exp {c |}{col 35}{res}{space 2} .0050956{col 47}{space 2} .0005964{col 58}{space 1}    8.54{col 67}{space 3}0.000{col 75}{space 4} .0039266{col 88}{space 3} .0062646
+{txt}{space 25}informal {c |}{col 35}{res}{space 2}-.0021337{col 47}{space 2} .0212443{col 58}{space 1}   -0.10{col 67}{space 3}0.920{col 75}{space 4}-.0437717{col 88}{space 3} .0395043
+{txt}{space 28}_cons {c |}{col 35}{res}{space 2}-4.018681{col 47}{space 2} .2223639{col 58}{space 1}  -18.07{col 67}{space 3}0.000{col 75}{space 4}-4.454507{col 88}{space 3}-3.582856
+{txt}{hline 34}{c BT}{hline 11}{hline 11}{hline 9}{hline 8}{hline 13}{hline 12}
+
+{com}. predict proba if e(sample), pr
+{txt}(14,463 missing values generated)
+
+{com}. hist proba
+{txt}(bin={res}51{txt}, start={res}.01616925{txt}, width={res}.01928321{txt})
+{res}
+{com}. hist proba, freq
+{txt}(bin={res}51{txt}, start={res}.01616925{txt}, width={res}.01928321{txt})
+{res}
 {com}. 
