@@ -1,62 +1,4 @@
-*|==============================================================================
-*| TITLE
-*| Occupational Licensing: Brazil
-*|
-*| DESCRIPTION
-*| Identifies individuals in licensed occupations using occupational codes from 
-*| "Classification of Occupations for Household Surveys" (COD) and quarterly 
-*| data from Continuous National Household Sample Survery (PNAD-Contínua). 
-*| PNAD-Contínua covers 2012 to 2024. 
-*|
-*| AUTHOR: João Pedro Bastos
-*| Texas Tech University | Joao-Pedro.Bastos@ttu.edu
-*|
-*|==============================================================================
-
-
-/*| USE THIS SECTION TO READ .TXT MICRODATA FILES FROM IBGE
-
-*| Required packages: datazoom_social
-
-*| For installation, type: 
-	
-	net install datazoom_social, from("https://raw.githubusercontent.com/datazoompuc/datazoom_social_stata/master/") force
-
-*| More info and guidance for usage, see: https://www.econ.puc-rio.br/datazoom/english/dz_stata.html
-
-*| Download microdata here: 
-https://www.ibge.gov.br/estatisticas/sociais/populacao/9171-pesquisa-nacional-por-amostra-de-domicilios-continua-mensal.html?=&t=microdados
-
-*| After following the steps above, run the following: 
-
-db datazoom_social
-
-forvalues year=2012/2024{
-datazoom_pnadcontinua, years(`year') /// 
- original( PATH WHERE MICRODATA IS STORED ) ///
- saving( PATH TO SAVE THE COMPILED FILES) nid
-}
-*/
-
-forvalues year=2012/2024{
-use "/Users/jpmvbastos/Library/CloudStorage/OneDrive-TexasTechUniversity/Personal/Projects/Data/PNAD/PNADC_trimestral_`year'.dta", clear
-
-gen employed = 0 
-replace employed = 1 if V4001==1 
-
-********* CODING OCCUPATIONS ********
-/*
-
-Notes:
-
-- Code 2413 is "Financial Analist". You can perform that job as either an economist or administrator.
-I've placed under economist, but ultimately it doesn't matter because both are licensed occupations. 
-
-Domestic economist and social worker have the same code under COD (2635). 
-I'm only coding a dummy for social workers to avoid any double-counting.
-
-
-*/
+use "/Users/jpmvbastos/Library/CloudStorage/OneDrive-TexasTechUniversity/Personal/Projects/Data/PNAD/PNADC_trimestral_2015.dta", clear
 
 * V4010: Occupation Code
 
@@ -353,7 +295,7 @@ gen urban = (V1022 == 1)
 gen female = (V2007 == 2)
 
 ** Formality
-/* Using one of two definitions from IBGE
+/* Using one of two definitions from IBGE (though I exclude )
 
 Definition 1: Domestic (V4012==1) or Private sector workers (V4012==3) that 
 do not have an employee booklet (carteira assinada) ; employers (V4012==5) or self-employed (V4012==6)
@@ -372,68 +314,5 @@ gen informal2 = 0 if V4001==1
 replace informal2 = 1 if V4001==1 & ((V4012==1 & V4029==2) | (V4012==3 & V4029==2) | ///
 	(V4012==5 & V4019==2) | (V4012==6 & V4019==2) | V4012==7)
 	
-
-/* Check about minimum requirements vs. ex ante licensing
-
-Physicits 
-Enologist 
-*/ 
-
-log using "/Users/jpmvbastos/Documents/GitHub/OccupationalLicensingBR/Data/Results/wages_`year'.smcl", replace
-
-*svyset [pweight= V1028], strata(Estrato) psu(UPA)
-
-forvalues i=1/4 {
-	foreach j in unlicensed licensed_t {
-	display("Mean demographics_`year', category `j', Quarter `i'")
-		table if Trimestre==`i' & `j'==1 [pweight=V1028], stat(mean rendimento) stat(median rendimento)
-}
-}
-
-log close
-
-log using "/Users/jpmvbastos/Documents/GitHub/OccupationalLicensingBR/Data/Results/shares_`year'.smcl", replace
-
-forvalues i=1/4 {
-	display("Shares `year', Quarter `i'")
-		table if Trimestre==`i' [pweight=V1028], stat(mean unlicensed licensed_t minreq regulated)
-}
-
-log close
-
-log using "/Users/jpmvbastos/Documents/GitHub/OccupationalLicensingBR/Data/Results/demographics_`year'.smcl", replace
-
-forvalues i=1/4 {
-	foreach j in unlicensed licensed_t {
-	display("Mean demographics_`year', category `j', Quarter `i'")
-		table if Trimestre==`i' & `j'==1 [pweight=V1028], stat(mean urban female)
-}
-}
-
-log close 
-
-log using "/Users/jpmvbastos/Documents/GitHub/OccupationalLicensingBR/Data/Results/informality_`year'.smcl", replace
-
-forvalues i=1/4 {
-	foreach j in unlicensed licensed_t {
-	display("Mean demographics_`year', category `j', Quarter `i'")
-		table if Trimestre==`i' & `j'==1 [pweight=V1028], stat(mean informal1 informal2)
-
-}
-}
-
-log close
-
-}
-
-/******* NEW OCCUPATIONS 
-
-use "/Users/jpmvbastos/Library/CloudStorage/OneDrive-TexasTechUniversity/Personal/Projects/Data/PNAD/PNADC_trimestral_2012.dta", clear
-
-gen new = 0 if V4001==1
-replace new =1 if sanitarian==1 | historian==1 | physicist==1 | esthetician==1 ///
-		| tourism==1 | retailer==1 | hair==1 
-	
-table [pweight=V1028] , stat(mean regulated) stat(mean new) stat(mean retail)
-*/
+bysort Trimestre: sum informal1 informal2
 
