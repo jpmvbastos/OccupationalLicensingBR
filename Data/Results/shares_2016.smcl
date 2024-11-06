@@ -3,55 +3,51 @@
       name:  {res}<unnamed>
        {txt}log:  {res}/Users/jpmvbastos/Documents/GitHub/OccupationalLicensingBR/Data/Results/shares_2016.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res} 7 Oct 2024, 10:27:33
+ {txt}opened on:  {res} 4 Nov 2024, 14:17:06
+Shares 2016, Quarter 1
 
-{txt}Sampling weights:{col 19}{res}V1028
-             {txt}VCE:{col 19}{res}linearized
-     {txt}Single unit:{col 19}{res}missing
-        {txt}Strata 1:{col 19}{res}Estrato
- {txt}Sampling unit 1:{col 19}{res}UPA
-           {txt}FPC 1:{col 19}<zero>
-{p2colreset}{...}
-% of Workforce in category, Quarter 1
-{res}
 {smcl}
 {reset}{...}
 {hline 10}{c -}{c TT}{c -}{c -}{hline 8}
-regulated{space 1} {c |}  {result:.1928359}
-minreq{space 4} {c |}  {result:.1131168}
+unlicensed {c |}  {space 7}{result:1}
 licensed_t {c |}  {result:.1105628}
+minreq{space 4} {c |}  {result:.1131168}
+regulated{space 1} {c |}  {result:.1928359}
 {hline 10}{c -}{c BT}{c -}{c -}{hline 8}
-% of Workforce in category, Quarter 2
+Shares 2016, Quarter 2
 {res}
 {smcl}
 {reset}{...}
 {hline 10}{c -}{c TT}{c -}{c -}{hline 8}
-regulated{space 1} {c |}  {result:.1926301}
-minreq{space 4} {c |}  {result:.1137821}
+unlicensed {c |}  {space 7}{result:1}
 licensed_t {c |}  {space 1}{result:.110583}
+minreq{space 4} {c |}  {result:.1137821}
+regulated{space 1} {c |}  {result:.1926301}
 {hline 10}{c -}{c BT}{c -}{c -}{hline 8}
-% of Workforce in category, Quarter 3
+Shares 2016, Quarter 3
 {res}
 {smcl}
 {reset}{...}
 {hline 10}{c -}{c TT}{c -}{c -}{hline 8}
-regulated{space 1} {c |}  {result:.1924085}
-minreq{space 4} {c |}  {result:.1150415}
+unlicensed {c |}  {space 7}{result:1}
 licensed_t {c |}  {result:.1119943}
+minreq{space 4} {c |}  {result:.1150415}
+regulated{space 1} {c |}  {result:.1924085}
 {hline 10}{c -}{c BT}{c -}{c -}{hline 8}
-% of Workforce in category, Quarter 4
+Shares 2016, Quarter 4
 {res}
 {smcl}
 {reset}{...}
 {hline 10}{c -}{c TT}{c -}{c -}{hline 8}
-regulated{space 1} {c |}  {result:.1917548}
-minreq{space 4} {c |}  {result:.1124379}
+unlicensed {c |}  {space 7}{result:1}
 licensed_t {c |}  {result:.1092556}
+minreq{space 4} {c |}  {result:.1124379}
+regulated{space 1} {c |}  {result:.1917548}
 {hline 10}{c -}{c BT}{c -}{c -}{hline 8}
       name:  {res}<unnamed>
        {txt}log:  {res}/Users/jpmvbastos/Documents/GitHub/OccupationalLicensingBR/Data/Results/shares_2016.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res} 7 Oct 2024, 10:27:37
+ {txt}closed on:  {res} 4 Nov 2024, 14:17:10
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}

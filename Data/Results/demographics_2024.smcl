@@ -1,0 +1,1383 @@
+{smcl}
+{txt}{sf}{ul off}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}/Users/jpmvbastos/Documents/GitHub/OccupationalLicensingBR/Data/Results/demographics_2024.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res} 2 Nov 2024, 14:56:19
+Mean demographics_2024, category unlicensed, Quarter 1
+
+{smcl}
+{reset}{...}
+{hline 9}{c -}{c TT}{c -}{c -}{hline 8}
+informal1 {c |}  {result:.3870066}
+informal2 {c |}  {result:.4130463}
+{hline 9}{c -}{c BT}{c -}{c -}{hline 8}
+Mean demographics_2024, category licensed_t, Quarter 1
+{res}
+{smcl}
+{reset}{...}
+{hline 9}{c -}{c TT}{c -}{c -}{hline 8}
+informal1 {c |}  {result:.3530377}
+informal2 {c |}  {space 1}{result:.394235}
+{hline 9}{c -}{c BT}{c -}{c -}{hline 8}
+Mean demographics_2024, category unlicensed, Quarter 2
+{res}
+{smcl}
+{reset}{...}
+{hline 9}{c -}{c TT}{c -}{c -}{hline 8}
+informal1 {c |}  {result:.3846654}
+informal2 {c |}  {result:.4092821}
+{hline 9}{c -}{c BT}{c -}{c -}{hline 8}
+Mean demographics_2024, category licensed_t, Quarter 2
+{res}
+{smcl}
+{reset}{...}
+{hline 9}{c -}{c TT}{c -}{c -}{hline 8}
+informal1 {c |}  {result:.3476441}
+informal2 {c |}  {result:.3882268}
+{hline 9}{c -}{c BT}{c -}{c -}{hline 8}
+Mean demographics_2024, category unlicensed, Quarter 3
+{res}{err}no observations
+{txt}{search r(2000), local:r(2000);}
+
+end of do-file
+
+{search r(2000), local:r(2000);}
+
+{com}. do "/var/folders/xd/gksdz50d7r3765bw8t_98y880000gn/T//SD24530.000000"
+{txt}
+{com}. use "/Users/jpmvbastos/Library/CloudStorage/OneDrive-TexasTechUniversity/Personal/Projects/Data/PNAD/PNADC_trimestral_2015.dta", clear
+{txt}
+{com}. 
+. * V4010: Occupation Code
+. 
+. tostring(V4010), gen(workcode)
+{txt}workcode generated as {res:str4}
+
+{com}. replace workcode = substr(workcode,1,3) 
+{txt}(987,935 real changes made)
+
+{com}. 
+. 
+. gen admin = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace admin = 1 if (workcode=="121" | V4010==2421 | V4010==2422 | V4010==2423) ///
+>         & V4010==1
+{txt}(0 real changes made)
+
+{com}. label var admin "Administrador: Conselho Federal de Administração (CFA)"
+{txt}
+{com}. 
+. gen admin_t = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace admin_t = 1 if V4001==1 & V4010==3343 
+{txt}(3,182 real changes made)
+
+{com}. 
+. gen lawyer = 0 if V4001==1      
+{txt}(1,381,298 missing values generated)
+
+{com}. replace lawyer = 1 if V4001==1 & V4010 == 2611
+{txt}(5,432 real changes made)
+
+{com}. label var admin "Advogado: Ordem dos Advogados do Brasil (OAB)"
+{txt}
+{com}. 
+. gen aircrew = 0 if V4001==1     
+{txt}(1,381,298 missing values generated)
+
+{com}. replace aircrew = 1 if V4001==1 & (workcode=="315"| V4010==5111)
+{txt}(709 real changes made)
+
+{com}. label var aircrew "Aeronauta: Agência Nacional de Aviação Civil (ANAC)"
+{txt}
+{com}. 
+. gen advertiser = 0 if V4001==1  
+{txt}(1,381,298 missing values generated)
+
+{com}. replace advertiser = 1 if V4001==1 & V4010 == 2431
+{txt}(1,149 real changes made)
+
+{com}. 
+. gen invest = 0 if V4001==1      
+{txt}(1,381,298 missing values generated)
+
+{com}. replace invest = 1 if V4001==1 & (V4010 == 2431 | V4010==3311)
+{txt}(1,796 real changes made)
+
+{com}. 
+. gen agronomist = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace agronomist  = 1 if V4001==1 & (V4010 == 2132 | V4010==3142 | V4010==3143)
+{txt}(1,064 real changes made)
+
+{com}. 
+. gen architect = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace architect = 1 if V4001==1 & (V4010 == 2161 | V4010 == 2162 | V4010 == 2164 | V4010 == 2165)
+{txt}(856 real changes made)
+
+{com}. 
+. gen archivist = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace archivist = 1 if V4001==1 & V4010 == 2621
+{txt}(10 real changes made)
+
+{com}. 
+. gen archivist_t = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace archivist_t = 1 if V4001==1 & V4010 == 3313
+{txt}(1,799 real changes made)
+
+{com}. 
+. gen artist = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace artist = 1 if V4001==1 & workcode=="265"
+{txt}(2,139 real changes made)
+
+{com}. 
+. gen socialwork = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace socialwork = 1 if V4001==1 & (V4010==2635 | V4010==3412)
+{txt}(2,161 real changes made)
+
+{com}. 
+. gen athlete = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace athlete = 1 if V4001==1 & V4010 == 3421
+{txt}(172 real changes made)
+
+{com}. 
+. gen actuary = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace actuary = 1 if V4001==1 & V4010 == 2120
+{txt}(31 real changes made)
+
+{com}. 
+. gen librarian = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace librarian=1 if V4001==1 & V4010 == 2622
+{txt}(445 real changes made)
+
+{com}. 
+. gen biologist = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace biologist=1 if V4001==1 & (V4010 == 2131 | V4010==3141)
+{txt}(554 real changes made)
+
+{com}. 
+. gen biomedic = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace biomedic=1 if V4001==1 & (V4010==3212 | V4010==2263 | V4010==2269)
+{txt}(663 real changes made)
+
+{com}. 
+. gen firefighter = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace firefighter = 1 if V4001==1 & V4010==5411
+{txt}(178 real changes made)
+
+{com}. 
+. gen hair = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace hair = 1 if V4001 & V4010==5141
+{txt}(9,509 real changes made)
+
+{com}. 
+. gen esthetician = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace esthetician = 1 if V4001==1 & V4010==5142 & ((Ano==2018 & Trimestre>=3) | Ano>2018)
+{txt}(0 real changes made)
+
+{com}. 
+. gen retailer = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace retailer = 1 if V4001==1 & workcode=="522" & (Ano>=2013)
+{txt}(67,589 real changes made)
+
+{com}. 
+. gen composer = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace composer = 1 if V4001==1 & V4010 == 2652
+{txt}(1,044 real changes made)
+
+{com}. 
+. gen accountant = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace accountant = 1 if V4001==1 & V4010==2411
+{txt}(3,431 real changes made)
+
+{com}. * See 4311      Trabalhadores de contabilidade e cálculo de custos for a potential comparison
+. 
+. gen realestate = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace realestate = 1 if V4001==1 & V4010==3334
+{txt}(2,360 real changes made)
+
+{com}. 
+. gen insurance = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace insurance = 1 if V4001==1 & V4010==3321
+{txt}(909 real changes made)
+
+{com}. 
+. gen customs_license_agent = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace customs_license_agent = 1 if V4001==1 & V4010==3331
+{txt}(95 real changes made)
+
+{com}. label var customs_license_agent "Despachante Aduaneiro: Receita Federal"
+{txt}
+{com}. 
+. gen economist = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace economist=0 if V4001==1 & (V4010==2631 | V4010 == 2413) 
+{txt}(0 real changes made)
+
+{com}. 
+. gen physed = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace physed=1 if V4001==1 & (V4010==3422 | V4010==3423)
+{txt}(1,816 real changes made)
+
+{com}. 
+. gen maid = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace maid = 1 if V4001==1 & V4010==5152
+{txt}(124 real changes made)
+
+{com}. 
+. gen nurse = 0 if V4001==1 
+{txt}(1,381,298 missing values generated)
+
+{com}. replace nurse = 1 if V4001==1 & V4010==2221
+{txt}(2,701 real changes made)
+
+{com}. * See also 3221: Profissionais de nível médio de enfermagem 
+. 
+. gen engineer = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace engineer = 1 if V4001==1 & (workcode=="214" | workcode=="215")
+{txt}(3,293 real changes made)
+
+{com}. 
+. gen engineer_t = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace engineer_t = 0 if V4001==1 & (workcode=="311"| workcode=="312")
+{txt}(0 real changes made)
+
+{com}. 
+. gen estatistician = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace estatistician = 1 if V4001==1 & V4010==2120
+{txt}(31 real changes made)
+
+{com}. 
+. gen pharmacist = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace pharmacist = 1 if V4001==1 & V4010==2262
+{txt}(1,097 real changes made)
+
+{com}. 
+. gen pharmacist_t = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace pharmacist_t = 1 if V4001==1 & V4010==3213
+{txt}(221 real changes made)
+
+{com}. 
+. gen physicist = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace physicist = 1 if V4001==1 & V4010==2111 & ((Ano==2018 & Trimestre>=3) | Ano>2018)
+{txt}(0 real changes made)
+
+{com}. 
+. gen pt = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace pt = 1 if V4001==1 & V4010==2264
+{txt}(1,185 real changes made)
+
+{com}. 
+. gen pt_t = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace pt_t = 1 if V4001==1 & V4010==3255
+{txt}(462 real changes made)
+
+{com}. 
+. gen phono = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace phono = 1 if V4001==1 & V4010==2266
+{txt}(194 real changes made)
+
+{com}. 
+. gen miner = 0 if V4001==1 
+{txt}(1,381,298 missing values generated)
+
+{com}. replace miner = 1 if V4001==1 & (V4010==9311 | V4010==8111)
+{txt}(599 real changes made)
+
+{com}. 
+. gen geographer = 0 if V4001==1 
+{txt}(1,381,298 missing values generated)
+
+{com}. replace geographer = 1 if V4001==1 & V4010==2165
+{txt}(35 real changes made)
+
+{com}. 
+. gen geologist = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace geologist = 1 if V4001==1 & V4010==2114
+{txt}(69 real changes made)
+
+{com}. 
+. gen carwasher = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace carwasher = 1 if V4001==1 & V4010==9122
+{txt}(2,400 real changes made)
+
+{com}. 
+. gen historian = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace historian = 1 if V4001==1 & V4010==2633 & Ano>=2021 
+{txt}(0 real changes made)
+
+{com}. 
+. gen traffic_instruc = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace traffic_instruc = 1 if V4001==1 & V4010==5165
+{txt}(531 real changes made)
+
+{com}. 
+. gen journalist = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace journalist = 1 if V4001==1 & V4010==2642
+{txt}(784 real changes made)
+
+{com}. 
+. gen auctioneer = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace auctioneer = 1 if V4001==1 & (V4010==3324 | V4010==3315)
+{txt}(104 real changes made)
+
+{com}. 
+. gen social_mom = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace social_mom = 1 if V4001==1 & V4010==2635
+{txt}(1,519 real changes made)
+
+{com}. 
+. gen vet = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace vet = 1 if V4001==1 & V4010==2250
+{txt}(515 real changes made)
+
+{com}. 
+. gen vet_t = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace vet_t = 1 if V4001==1 & V4010==3240
+{txt}(110 real changes made)
+
+{com}. 
+. gen doctor = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace doctor = 1 if V4001==1 & workcode=="221"
+{txt}(2,843 real changes made)
+
+{com}. 
+. gen mototaxi = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace mototaxi = 1 if V4001==1 & V4010==8321
+{txt}(4,961 real changes made)
+
+{com}. 
+. gen museologist = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace museologist = 1 if V4001==1 & V4010==2621
+{txt}(10 real changes made)
+
+{com}. 
+. gen musician = 0 if V4001==1 
+{txt}(1,381,298 missing values generated)
+
+{com}. replace musician = 1 if V4001==1 & V4010==2652
+{txt}(1,044 real changes made)
+
+{com}. 
+. gen dietician = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace dietician = 1 if V4001==1 & V4010==2265
+{txt}(532 real changes made)
+
+{com}. 
+. gen oceanographer = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace oceanographer = 1 if V4001==1 & V4010==3251
+{txt}(349 real changes made)
+
+{com}. 
+. gen dentist = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace dentist = 1 if V4001==1 & V4010==2261
+{txt}(1,943 real changes made)
+
+{com}. 
+. gen eduadvisor = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace eduadvisor = 1 if V4001==1 & V4010==2359
+{txt}(1,572 real changes made)
+
+{com}. 
+. gen fisherman = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace fisherman = 1 if V4001==1 & V4010==6225
+{txt}(5,805 real changes made)
+
+{com}. 
+. gen psychologist = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace psychologist = 1 if V4001==1 & V4010==2634
+{txt}(1,401 real changes made)
+
+{com}. 
+. gen prosthetics = 0 if V4001==1 
+{txt}(1,381,298 missing values generated)
+
+{com}. replace prosthetics = 1 if V4001==1 & V4010==3214
+{txt}(405 real changes made)
+
+{com}. 
+. gen chemist = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace chemist = 1 if V4001==1 & V4010==2113
+{txt}(182 real changes made)
+
+{com}. 
+. gen chemist_t = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace chemist_t = 1 if V4001==1 & (V4010==3132 | V4010==3133 | V4010==3134| V4010==3135)
+{txt}(495 real changes made)
+
+{com}. 
+. gen radio = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace radio = 1 if V4001==1 & V4010==2656
+{txt}(428 real changes made)
+
+{com}. 
+. gen pubrel = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace pubrel = 1 if V4001==1 & (V4010==2432 | V4010==1222)
+{txt}(561 real changes made)
+
+{com}. 
+. gen commercialrep = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace commercialrep = 1 if V4001==1 & V4010==3322
+{txt}(3,764 real changes made)
+
+{com}. 
+. gen sanitarian = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace sanitarian = 1 if V4001==1 & V4010==3253 & Ano>=2024
+{txt}(0 real changes made)
+
+{com}. 
+. gen secretary = 0 if V4001==1 
+{txt}(1,381,298 missing values generated)
+
+{com}. replace secretary = 1 if V4001==1 & (V4010==4120 | workcode=="334")
+{txt}(15,079 real changes made)
+
+{com}. 
+. gen sociologist = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace sociologist = 1 if V4001==1 & V4010==2632
+{txt}(39 real changes made)
+
+{com}. 
+. gen taxi = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace taxi = 1 if V4001==1 & V4010==8322 
+{txt}(13,967 real changes made)
+
+{com}. 
+. gen radiologist = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace radiologist = 1 if V4001==1 & V4010==3211
+{txt}(446 real changes made)
+
+{com}. 
+. gen laborsafety = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace laborsafety = 1 if V4001==1 & V4010==3257
+{txt}(1,575 real changes made)
+
+{com}. 
+. gen entertainment = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace entertainment = 1 if V4001==1 & V4010==3435
+{txt}(119 real changes made)
+
+{com}. 
+. gen signlang = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace signlang = 1 if V4001==1 & V4010==2643
+{txt}(106 real changes made)
+
+{com}. 
+. gen tourism = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace tourism = 1 if V4001==1 & V4010==5113 
+{txt}(205 real changes made)
+
+{com}. 
+. gen zootecnician = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace zootecnician  = 1 if V4001==1 & (V4010==3240 | V4010==3141)
+{txt}(297 real changes made)
+
+{com}. 
+. ************
+. * Overall Categories    
+. 
+. * Licensed Occupations
+. gen licensed = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace licensed = 1 if V4001==1 & (admin==1 | lawyer==1 | aircrew==1 | advertiser==1 | ///
+>                 invest==1 | agronomist==1 | architect==1 | archivist==1 | artist==1 | ///
+>                 socialwork==1 | actuary==1 | librarian==1 | composer==1 | accountant==1 | ///
+>                 customs_license_agent==1 | economist==1 | physed==1 | engineer==1 | nurse==1 | ///
+>                 estatistician==1 | pharmacist==1 | pt==1 | phono==1 | geographer==1 | ///
+>                 geologist==1 | carwasher==1 | historian==1 | traffic_instruc==1 | journalist==1 | ///
+>                 auctioneer==1 | social_mom==1 | vet==1 | doctor==1 | mototaxi==1 | museologist==1 | ///
+>                 musician==1 | dietician==1 | dentist==1 | fisherman==1 | psychologist==1 | ///
+>                 chemist==1 | radio==1 | pubrel==1 | commercialrep==1 | secretary==1 | ///
+>                 taxi==1 | zootecnician==1 | laborsafety==1  | sociologist==1 | physicist==1)
+{txt}(85,807 real changes made)
+
+{com}. 
+. * Technicians -- coded separetely in case one wants to analyze by itself
+. gen technician = 0 if V4001==1 
+{txt}(1,381,298 missing values generated)
+
+{com}. replace technician = 1 if V4001==1 & (admin_t==1 | archivist_t==1| chemist_t==1 | ///
+>                 engineer_t==1 | pharmacist_t==1 | chemist_t==1 | vet_t==1  |  prosthetics==1 )
+{txt}(6,212 real changes made)
+
+{com}. 
+. * All licensed, including technicians 
+. gen licensed_t = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace licensed_t = 1 if V4001==1 & (licensed==1 | technician==1)
+{txt}(88,727 real changes made)
+
+{com}. 
+. * No ex-ante licensing
+. gen exante = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace exante = 1 if V4001==1 & (firefighter==1 |              /// 
+>         oceanographer==1 | signlang==1 | sanitarian==1 | esthetician==1 |   /// 
+>         eduadvisor==1 )
+{txt}(2,205 real changes made)
+
+{com}. 
+. * Minimum requirements 
+. gen minreq = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace minreq = 1 if licensed==1 | exante==1 | technician==1 | licensed_t==1
+{txt}(90,932 real changes made)
+
+{com}.  
+.  * Regulated 
+. gen regulated = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace regulated = 1 if V4001==1 & (minreq==1 | retailer==1 | maid==1 | miner==1 )     
+{txt}(159,244 real changes made)
+
+{com}. 
+. * Dummy for Unlicensed workers
+. gen unlicensed = 1 if V4001==1 & minreq==0 & exante==0 & licensed_t==0
+{txt}(1,472,230 missing values generated)
+
+{com}. gen allworkers=1 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}.         
+. ******************
+. * Outcomes Variables 
+. 
+. * Wage 
+. rename V403412 rendimento_bruto
+{res}{txt}
+{com}. 
+. * Demographics
+. gen urban = (V1022 == 1)
+{txt}
+{com}. gen female = (V2007 == 2)
+{txt}
+{com}. 
+. ** Formality
+. /* Using one of two definitions from IBGE (though I exclude )
+> 
+> Definition 1: Domestic (V4012==1) or Private sector workers (V4012==3) that 
+> do not have an employee booklet (carteira assinada) ; employers (V4012==5) or self-employed (V4012==6)
+> that do not contribute to social security (V4032==2) and non-paid family workers (V4012==7)
+> 
+> * Definition 2: Domestic (V4012==1) or Private sector workers (V4012==3) that 
+> do not have an employee booklet (carteira assinada) ; employers (V4012==5) or self-employed (V4012==6)
+> that do not have a formal business (not having a corporate tax id: V4019==2) and non-paid family workers (V4012==7)
+> 
+> */
+. gen informal1 = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace informal = 1 if V4001==1 & ((V4012==1 & V4029==2) | (V4012==3 & V4029==2) | ///
+>         (V4012==5 & V4032==2) | (V4012==6 & V4032==2) | V4012==7)
+{txt}(338,464 real changes made)
+
+{com}. 
+. gen informal2 = 0 if V4001==1
+{txt}(1,381,298 missing values generated)
+
+{com}. replace informal2 = 1 if V4001==1 & ((V4012==1 & V4029==2) | (V4012==3 & V4029==2) | ///
+>         (V4012==5 & V4019==2) | (V4012==6 & V4019==2) | V4012==7)
+{txt}(203,181 real changes made)
+
+{com}.         
+. 
+{txt}end of do-file
+
+{com}. do "/var/folders/xd/gksdz50d7r3765bw8t_98y880000gn/T//SD24530.000000"
+{txt}
+{com}. bysort Trimestre: sum informal1 informal2
+
+{txt}{hline}
+-> Trimestre = 1
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 3}informal1 {c |}{res}    224,701    .3760019    .4843816          0          1
+{txt}{space 3}informal2 {c |}{res}    224,701    .1651127    .3712831          0          1
+
+{txt}{hline}
+-> Trimestre = 2
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 3}informal1 {c |}{res}    228,096    .3723476    .4834314          0          1
+{txt}{space 3}informal2 {c |}{res}    228,096    .1639485    .3702297          0          1
+
+{txt}{hline}
+-> Trimestre = 3
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 3}informal1 {c |}{res}    226,242    .3771006    .4846615          0          1
+{txt}{space 3}informal2 {c |}{res}    226,242    .1649517    .3711378          0          1
+
+{txt}{hline}
+-> Trimestre = 4
+
+    Variable {c |}        Obs        Mean    Std. dev.       Min        Max
+{hline 13}{c +}{hline 57}
+{space 3}informal1 {c |}{res}    222,701    .3759705    .4843735          0          1
+{txt}{space 3}informal2 {c |}{res}    222,701    .4102586    .4918817          0          1
+
+{txt}
+{com}. 
+{txt}end of do-file
+
+{com}. bysort Trimestre: tab V4019
+
+{txt}{hline}
+-> Trimestre = 1
+no observations
+
+{hline}
+-> Trimestre = 2
+no observations
+
+{hline}
+-> Trimestre = 3
+no observations
+
+{hline}
+-> Trimestre = 4
+
+       Esse {c |}
+ negócio/em {c |}
+  presa era {c |}
+ registrado {c |}
+no Cadastro {c |}
+Nacional da {c |}
+     Pessoa {c |}
+ Jurídica - {c |}
+         CN {c |}      Freq.     Percent        Cum.
+{hline 12}{c +}{hline 35}
+          1 {c |}{res}     17,614       22.57       22.57
+{txt}          2 {c |}{res}     60,428       77.43      100.00
+{txt}{hline 12}{c +}{hline 35}
+      Total {c |}{res}     78,042      100.00
+
+
+{com}. do "/var/folders/xd/gksdz50d7r3765bw8t_98y880000gn/T//SD24530.000000"
+{txt}
+{com}. *|==============================================================================
+. *| TITLE
+. *| Occupational Licensing: Brazil
+. *|
+. *| DESCRIPTION
+. *| Identifies individuals in licensed occupations using occupational codes from 
+. *| "Classification of Occupations for Household Surveys" (COD) and quarterly 
+. *| data from Continuous National Household Sample Survery (PNAD-Contínua). 
+. *| PNAD-Contínua covers 2012 to 2024. 
+. *|
+. *| AUTHOR: João Pedro Bastos
+. *| Texas Tech University | Joao-Pedro.Bastos@ttu.edu
+. *|
+. *|==============================================================================
+. 
+. 
+. /*| USE THIS SECTION TO READ .TXT MICRODATA FILES FROM IBGE
+> 
+> *| Required packages: datazoom_social
+> 
+> *| For installation, type: 
+>         
+>         net install datazoom_social, from("https://raw.githubusercontent.com/datazoompuc/datazoom_social_stata/master/") force
+> 
+> *| More info and guidance for usage, see: https://www.econ.puc-rio.br/datazoom/english/dz_stata.html
+> 
+> *| Download microdata here: 
+> https://www.ibge.gov.br/estatisticas/sociais/populacao/9171-pesquisa-nacional-por-amostra-de-domicilios-continua-mensal.html?=&t=microdados
+> 
+> *| After following the steps above, run the following: 
+> 
+> db datazoom_social
+> 
+> forvalues year=2012/2024{c -(}
+> datazoom_pnadcontinua, years(`year') /// 
+>  original( PATH WHERE MICRODATA IS STORED ) ///
+>  saving( PATH TO SAVE THE COMPILED FILES) nid
+> {c )-}
+> */
+. 
+. forvalues year=2012/2024{c -(}
+{txt}  2{com}. use "/Users/jpmvbastos/Library/CloudStorage/OneDrive-TexasTechUniversity/Personal/Projects/Data/PNAD/PNADC_trimestral_`year'.dta", clear
+{txt}  3{com}. 
+. gen employed = 0 
+{txt}  4{com}. replace employed = 1 if V4001==1 
+{txt}  5{com}. 
+. ********* CODING OCCUPATIONS ********
+. /*
+> 
+> Notes:
+> 
+> - Code 2413 is "Financial Analist". You can perform that job as either an economist or administrator.
+> I've placed under economist, but ultimately it doesn't matter because both are licensed occupations. 
+> 
+> Domestic economist and social worker have the same code under COD (2635). 
+> I'm only coding a dummy for social workers to avoid any double-counting.
+> 
+> 
+> */
+. 
+. * V4010: Occupation Code
+. 
+. tostring(V4010), gen(workcode)
+{txt}  6{com}. replace workcode = substr(workcode,1,3) 
+{txt}  7{com}. 
+. 
+. gen admin = 0 if V4001==1
+{txt}  8{com}. replace admin = 1 if (workcode=="121" | V4010==2421 | V4010==2422 | V4010==2423) ///
+>         & V4010==1
+{txt}  9{com}. label var admin "Administrador: Conselho Federal de Administração (CFA)"
+{txt} 10{com}. 
+. gen admin_t = 0 if V4001==1
+{txt} 11{com}. replace admin_t = 1 if V4001==1 & V4010==3343 
+{txt} 12{com}. 
+. gen lawyer = 0 if V4001==1      
+{txt} 13{com}. replace lawyer = 1 if V4001==1 & V4010 == 2611
+{txt} 14{com}. label var admin "Advogado: Ordem dos Advogados do Brasil (OAB)"
+{txt} 15{com}. 
+. gen aircrew = 0 if V4001==1     
+{txt} 16{com}. replace aircrew = 1 if V4001==1 & (workcode=="315"| V4010==5111)
+{txt} 17{com}. label var aircrew "Aeronauta: Agência Nacional de Aviação Civil (ANAC)"
+{txt} 18{com}. 
+. gen advertiser = 0 if V4001==1  
+{txt} 19{com}. replace advertiser = 1 if V4001==1 & V4010 == 2431
+{txt} 20{com}. 
+. gen invest = 0 if V4001==1      
+{txt} 21{com}. replace invest = 1 if V4001==1 & (V4010 == 2431 | V4010==3311)
+{txt} 22{com}. 
+. gen agronomist = 0 if V4001==1
+{txt} 23{com}. replace agronomist  = 1 if V4001==1 & (V4010 == 2132 | V4010==3142 | V4010==3143)
+{txt} 24{com}. 
+. gen architect = 0 if V4001==1
+{txt} 25{com}. replace architect = 1 if V4001==1 & (V4010 == 2161 | V4010 == 2162 | V4010 == 2164 | V4010 == 2165)
+{txt} 26{com}. 
+. gen archivist = 0 if V4001==1
+{txt} 27{com}. replace archivist = 1 if V4001==1 & V4010 == 2621
+{txt} 28{com}. 
+. gen archivist_t = 0 if V4001==1
+{txt} 29{com}. replace archivist_t = 1 if V4001==1 & V4010 == 3313
+{txt} 30{com}. 
+. gen artist = 0 if V4001==1
+{txt} 31{com}. replace artist = 1 if V4001==1 & workcode=="265"
+{txt} 32{com}. 
+. gen socialwork = 0 if V4001==1
+{txt} 33{com}. replace socialwork = 1 if V4001==1 & (V4010==2635 | V4010==3412)
+{txt} 34{com}. 
+. gen athlete = 0 if V4001==1
+{txt} 35{com}. replace athlete = 1 if V4001==1 & V4010 == 3421
+{txt} 36{com}. 
+. gen actuary = 0 if V4001==1
+{txt} 37{com}. replace actuary = 1 if V4001==1 & V4010 == 2120
+{txt} 38{com}. 
+. gen librarian = 0 if V4001==1
+{txt} 39{com}. replace librarian=1 if V4001==1 & V4010 == 2622
+{txt} 40{com}. 
+. gen biologist = 0 if V4001==1
+{txt} 41{com}. replace biologist=1 if V4001==1 & (V4010 == 2131 | V4010==3141)
+{txt} 42{com}. 
+. gen biomedic = 0 if V4001==1
+{txt} 43{com}. replace biomedic=1 if V4001==1 & (V4010==3212 | V4010==2263 | V4010==2269)
+{txt} 44{com}. 
+. gen firefighter = 0 if V4001==1
+{txt} 45{com}. replace firefighter = 1 if V4001==1 & V4010==5411
+{txt} 46{com}. 
+. gen hair = 0 if V4001==1
+{txt} 47{com}. replace hair = 1 if V4001 & V4010==5141
+{txt} 48{com}. 
+. gen esthetician = 0 if V4001==1
+{txt} 49{com}. replace esthetician = 1 if V4001==1 & V4010==5142 & ((Ano==2018 & Trimestre>=3) | Ano>2018)
+{txt} 50{com}. 
+. gen retailer = 0 if V4001==1
+{txt} 51{com}. replace retailer = 1 if V4001==1 & workcode=="522" & (Ano>=2013)
+{txt} 52{com}. 
+. gen composer = 0 if V4001==1
+{txt} 53{com}. replace composer = 1 if V4001==1 & V4010 == 2652
+{txt} 54{com}. 
+. gen accountant = 0 if V4001==1
+{txt} 55{com}. replace accountant = 1 if V4001==1 & V4010==2411
+{txt} 56{com}. * See 4311      Trabalhadores de contabilidade e cálculo de custos for a potential comparison
+. 
+. gen realestate = 0 if V4001==1
+{txt} 57{com}. replace realestate = 1 if V4001==1 & V4010==3334
+{txt} 58{com}. 
+. gen insurance = 0 if V4001==1
+{txt} 59{com}. replace insurance = 1 if V4001==1 & V4010==3321
+{txt} 60{com}. 
+. gen customs_license_agent = 0 if V4001==1
+{txt} 61{com}. replace customs_license_agent = 1 if V4001==1 & V4010==3331
+{txt} 62{com}. label var customs_license_agent "Despachante Aduaneiro: Receita Federal"
+{txt} 63{com}. 
+. gen economist = 0 if V4001==1
+{txt} 64{com}. replace economist=0 if V4001==1 & (V4010==2631 | V4010 == 2413) 
+{txt} 65{com}. 
+. gen physed = 0 if V4001==1
+{txt} 66{com}. replace physed=1 if V4001==1 & (V4010==3422 | V4010==3423)
+{txt} 67{com}. 
+. gen maid = 0 if V4001==1
+{txt} 68{com}. replace maid = 1 if V4001==1 & V4010==5152
+{txt} 69{com}. 
+. gen nurse = 0 if V4001==1 
+{txt} 70{com}. replace nurse = 1 if V4001==1 & V4010==2221
+{txt} 71{com}. * See also 3221: Profissionais de nível médio de enfermagem 
+. 
+. gen engineer = 0 if V4001==1
+{txt} 72{com}. replace engineer = 1 if V4001==1 & (workcode=="214" | workcode=="215")
+{txt} 73{com}. 
+. gen engineer_t = 0 if V4001==1
+{txt} 74{com}. replace engineer_t = 0 if V4001==1 & (workcode=="311"| workcode=="312")
+{txt} 75{com}. 
+. gen estatistician = 0 if V4001==1
+{txt} 76{com}. replace estatistician = 1 if V4001==1 & V4010==2120
+{txt} 77{com}. 
+. gen pharmacist = 0 if V4001==1
+{txt} 78{com}. replace pharmacist = 1 if V4001==1 & V4010==2262
+{txt} 79{com}. 
+. gen pharmacist_t = 0 if V4001==1
+{txt} 80{com}. replace pharmacist_t = 1 if V4001==1 & V4010==3213
+{txt} 81{com}. 
+. gen physicist = 0 if V4001==1
+{txt} 82{com}. replace physicist = 1 if V4001==1 & V4010==2111 & ((Ano==2018 & Trimestre>=3) | Ano>2018)
+{txt} 83{com}. 
+. gen pt = 0 if V4001==1
+{txt} 84{com}. replace pt = 1 if V4001==1 & V4010==2264
+{txt} 85{com}. 
+. gen pt_t = 0 if V4001==1
+{txt} 86{com}. replace pt_t = 1 if V4001==1 & V4010==3255
+{txt} 87{com}. 
+. gen phono = 0 if V4001==1
+{txt} 88{com}. replace phono = 1 if V4001==1 & V4010==2266
+{txt} 89{com}. 
+. gen miner = 0 if V4001==1 
+{txt} 90{com}. replace miner = 1 if V4001==1 & (V4010==9311 | V4010==8111)
+{txt} 91{com}. 
+. gen geographer = 0 if V4001==1 
+{txt} 92{com}. replace geographer = 1 if V4001==1 & V4010==2165
+{txt} 93{com}. 
+. gen geologist = 0 if V4001==1
+{txt} 94{com}. replace geologist = 1 if V4001==1 & V4010==2114
+{txt} 95{com}. 
+. gen carwasher = 0 if V4001==1
+{txt} 96{com}. replace carwasher = 1 if V4001==1 & V4010==9122
+{txt} 97{com}. 
+. gen historian = 0 if V4001==1
+{txt} 98{com}. replace historian = 1 if V4001==1 & V4010==2633 & Ano>=2021 
+{txt} 99{com}. 
+. gen traffic_instruc = 0 if V4001==1
+{txt}100{com}. replace traffic_instruc = 1 if V4001==1 & V4010==5165
+{txt}101{com}. 
+. gen journalist = 0 if V4001==1
+{txt}102{com}. replace journalist = 1 if V4001==1 & V4010==2642
+{txt}103{com}. 
+. gen auctioneer = 0 if V4001==1
+{txt}104{com}. replace auctioneer = 1 if V4001==1 & (V4010==3324 | V4010==3315)
+{txt}105{com}. 
+. gen social_mom = 0 if V4001==1
+{txt}106{com}. replace social_mom = 1 if V4001==1 & V4010==2635
+{txt}107{com}. 
+. gen vet = 0 if V4001==1
+{txt}108{com}. replace vet = 1 if V4001==1 & V4010==2250
+{txt}109{com}. 
+. gen vet_t = 0 if V4001==1
+{txt}110{com}. replace vet_t = 1 if V4001==1 & V4010==3240
+{txt}111{com}. 
+. gen doctor = 0 if V4001==1
+{txt}112{com}. replace doctor = 1 if V4001==1 & workcode=="221"
+{txt}113{com}. 
+. gen mototaxi = 0 if V4001==1
+{txt}114{com}. replace mototaxi = 1 if V4001==1 & V4010==8321
+{txt}115{com}. 
+. gen museologist = 0 if V4001==1
+{txt}116{com}. replace museologist = 1 if V4001==1 & V4010==2621
+{txt}117{com}. 
+. gen musician = 0 if V4001==1 
+{txt}118{com}. replace musician = 1 if V4001==1 & V4010==2652
+{txt}119{com}. 
+. gen dietician = 0 if V4001==1
+{txt}120{com}. replace dietician = 1 if V4001==1 & V4010==2265
+{txt}121{com}. 
+. gen oceanographer = 0 if V4001==1
+{txt}122{com}. replace oceanographer = 1 if V4001==1 & V4010==3251
+{txt}123{com}. 
+. gen dentist = 0 if V4001==1
+{txt}124{com}. replace dentist = 1 if V4001==1 & V4010==2261
+{txt}125{com}. 
+. gen eduadvisor = 0 if V4001==1
+{txt}126{com}. replace eduadvisor = 1 if V4001==1 & V4010==2359
+{txt}127{com}. 
+. gen fisherman = 0 if V4001==1
+{txt}128{com}. replace fisherman = 1 if V4001==1 & V4010==6225
+{txt}129{com}. 
+. gen psychologist = 0 if V4001==1
+{txt}130{com}. replace psychologist = 1 if V4001==1 & V4010==2634
+{txt}131{com}. 
+. gen prosthetics = 0 if V4001==1 
+{txt}132{com}. replace prosthetics = 1 if V4001==1 & V4010==3214
+{txt}133{com}. 
+. gen chemist = 0 if V4001==1
+{txt}134{com}. replace chemist = 1 if V4001==1 & V4010==2113
+{txt}135{com}. 
+. gen chemist_t = 0 if V4001==1
+{txt}136{com}. replace chemist_t = 1 if V4001==1 & (V4010==3132 | V4010==3133 | V4010==3134| V4010==3135)
+{txt}137{com}. 
+. gen radio = 0 if V4001==1
+{txt}138{com}. replace radio = 1 if V4001==1 & V4010==2656
+{txt}139{com}. 
+. gen pubrel = 0 if V4001==1
+{txt}140{com}. replace pubrel = 1 if V4001==1 & (V4010==2432 | V4010==1222)
+{txt}141{com}. 
+. gen commercialrep = 0 if V4001==1
+{txt}142{com}. replace commercialrep = 1 if V4001==1 & V4010==3322
+{txt}143{com}. 
+. gen sanitarian = 0 if V4001==1
+{txt}144{com}. replace sanitarian = 1 if V4001==1 & V4010==3253 & Ano>=2024
+{txt}145{com}. 
+. gen secretary = 0 if V4001==1 
+{txt}146{com}. replace secretary = 1 if V4001==1 & (V4010==4120 | workcode=="334")
+{txt}147{com}. 
+. gen sociologist = 0 if V4001==1
+{txt}148{com}. replace sociologist = 1 if V4001==1 & V4010==2632
+{txt}149{com}. 
+. gen taxi = 0 if V4001==1
+{txt}150{com}. replace taxi = 1 if V4001==1 & V4010==8322 
+{txt}151{com}. 
+. gen radiologist = 0 if V4001==1
+{txt}152{com}. replace radiologist = 1 if V4001==1 & V4010==3211
+{txt}153{com}. 
+. gen laborsafety = 0 if V4001==1
+{txt}154{com}. replace laborsafety = 1 if V4001==1 & V4010==3257
+{txt}155{com}. 
+. gen entertainment = 0 if V4001==1
+{txt}156{com}. replace entertainment = 1 if V4001==1 & V4010==3435
+{txt}157{com}. 
+. gen signlang = 0 if V4001==1
+{txt}158{com}. replace signlang = 1 if V4001==1 & V4010==2643
+{txt}159{com}. 
+. gen tourism = 0 if V4001==1
+{txt}160{com}. replace tourism = 1 if V4001==1 & V4010==5113 
+{txt}161{com}. 
+. gen zootecnician = 0 if V4001==1
+{txt}162{com}. replace zootecnician  = 1 if V4001==1 & (V4010==3240 | V4010==3141)
+{txt}163{com}. 
+. ************
+. * Overall Categories    
+. 
+. * Licensed Occupations
+. gen licensed = 0 if V4001==1
+{txt}164{com}. replace licensed = 1 if V4001==1 & (admin==1 | lawyer==1 | aircrew==1 | advertiser==1 | ///
+>                 invest==1 | agronomist==1 | architect==1 | archivist==1 | artist==1 | ///
+>                 socialwork==1 | actuary==1 | librarian==1 | composer==1 | accountant==1 | ///
+>                 customs_license_agent==1 | economist==1 | physed==1 | engineer==1 | nurse==1 | ///
+>                 estatistician==1 | pharmacist==1 | pt==1 | phono==1 | geographer==1 | ///
+>                 geologist==1 | carwasher==1 | historian==1 | traffic_instruc==1 | journalist==1 | ///
+>                 auctioneer==1 | social_mom==1 | vet==1 | doctor==1 | mototaxi==1 | museologist==1 | ///
+>                 musician==1 | dietician==1 | dentist==1 | fisherman==1 | psychologist==1 | ///
+>                 chemist==1 | radio==1 | pubrel==1 | commercialrep==1 | secretary==1 | ///
+>                 taxi==1 | zootecnician==1 | laborsafety==1  | sociologist==1 | physicist==1)
+{txt}165{com}. 
+. * Technicians -- coded separetely in case one wants to analyze by itself
+. gen technician = 0 if V4001==1 
+{txt}166{com}. replace technician = 1 if V4001==1 & (admin_t==1 | archivist_t==1| chemist_t==1 | ///
+>                 engineer_t==1 | pharmacist_t==1 | chemist_t==1 | vet_t==1  |  prosthetics==1 )
+{txt}167{com}. 
+. * All licensed, including technicians 
+. gen licensed_t = 0 if V4001==1
+{txt}168{com}. replace licensed_t = 1 if V4001==1 & (licensed==1 | technician==1)
+{txt}169{com}. 
+. * No ex-ante licensing
+. gen exante = 0 if V4001==1
+{txt}170{com}. replace exante = 1 if V4001==1 & (firefighter==1 |              /// 
+>         oceanographer==1 | signlang==1 | sanitarian==1 | esthetician==1 |   /// 
+>         eduadvisor==1 )
+{txt}171{com}. 
+. * Minimum requirements 
+. gen minreq = 0 if V4001==1
+{txt}172{com}. replace minreq = 1 if licensed==1 | exante==1 | technician==1 | licensed_t==1
+{txt}173{com}.  
+.  * Regulated 
+. gen regulated = 0 if V4001==1
+{txt}174{com}. replace regulated = 1 if V4001==1 & (minreq==1 | retailer==1 | maid==1 | miner==1 )     
+{txt}175{com}. 
+. * Dummy for Unlicensed workers
+. gen unlicensed = 1 if V4001==1 & minreq==0 & exante==0 & licensed_t==0
+{txt}176{com}. gen allworkers=1 if V4001==1
+{txt}177{com}.         
+. ******************
+. * Outcomes Variables 
+. 
+. * Wage 
+. rename V403412 rendimento_bruto
+{txt}178{com}. 
+. * Demographics
+. gen urban = (V1022 == 1)
+{txt}179{com}. gen female = (V2007 == 2)
+{txt}180{com}. 
+. ** Formality
+. /* Using one of two definitions from IBGE (though I exclude )
+> 
+> Definition 1: Domestic (V4012==1) or Private sector workers (V4012==3) that 
+> do not have an employee booklet (carteira assinada) ; employers (V4012==5) or self-employed (V4012==6)
+> that do not contribute to social security (V4032==2) and non-paid family workers (V4012==7)
+> 
+> * Definition 2: Domestic (V4012==1) or Private sector workers (V4012==3) that 
+> do not have an employee booklet (carteira assinada) ; employers (V4012==5) or self-employed (V4012==6)
+> that do not have a formal business (not having a corporate tax id: V4019==2) and non-paid family workers (V4012==7)
+> 
+> */
+. gen informal1 = 0 if V4001==1
+{txt}181{com}. replace informal = 1 if V4001==1 & ((V4012==1 & V4029==2) | (V4012==3 & V4029==2) | ///
+>         (V4012==5 & V4032==2) | (V4012==6 & V4032==2) | V4012==7)
+{txt}182{com}. 
+. gen informal2 = 0 if V4001==1
+{txt}183{com}. replace informal2 = 1 if V4001==1 & ((V4012==1 & V4029==2) | (V4012==3 & V4029==2) | ///
+>         (V4012==5 & V4019==2) | (V4012==6 & V4019==2) | V4012==7)
+{txt}184{com}.         
+. 
+. /* Check about minimum requirements vs. ex ante licensing
+> 
+> Physicits 
+> Enologist 
+> */ 
+. 
+. log using "/Users/jpmvbastos/Documents/GitHub/OccupationalLicensingBR/Data/Results/wages_`year'.smcl", replace
+{txt}185{com}. 
+. *svyset [pweight= V1028], strata(Estrato) psu(UPA)
+. 
+. forvalues i=1/4 {c -(}
+{txt}186{com}.         foreach j in unlicensed licensed_t {c -(}
+{txt}187{com}.         display("Mean demographics_`year', category `j', Quarter `i'")
+{txt}188{com}.                 table if Trimestre==`i' & `j'==1 [pweight=V1028], stat(mean rendimento) stat(median rendimento)
+{txt}189{com}. {c )-}
+{txt}190{com}. {c )-}
+{txt}191{com}. 
+. log close
+{txt}192{com}. 
+. log using "/Users/jpmvbastos/Documents/GitHub/OccupationalLicensingBR/Data/Results/shares_`year'.smcl", replace
+{txt}193{com}. 
+. forvalues i=1/4 {c -(}
+{txt}194{com}.         display("Shares `year', Quarter `i'")
+{txt}195{com}.                 table if Trimestre==`i' [pweight=V1028], stat(mean unlicensed licensed_t minreq regulated
+{txt}196{com}. {c )-}
+{txt}197{com}. {c )-}
+{txt}(886,018 real changes made)
+workcode generated as {res:str4}
+(970,403 real changes made)
+(1,366,446 missing values generated)
+(0 real changes made)
+(1,366,446 missing values generated)
+(2,164 real changes made)
+(1,366,446 missing values generated)
+(4,268 real changes made)
+(1,366,446 missing values generated)
+(722 real changes made)
+(1,366,446 missing values generated)
+(1,125 real changes made)
+(1,366,446 missing values generated)
+(1,725 real changes made)
+(1,366,446 missing values generated)
+(1,247 real changes made)
+(1,366,446 missing values generated)
+(777 real changes made)
+(1,366,446 missing values generated)
+(12 real changes made)
+(1,366,446 missing values generated)
+(1,628 real changes made)
+(1,366,446 missing values generated)
+(2,303 real changes made)
+(1,366,446 missing values generated)
+(1,892 real changes made)
+(1,366,446 missing values generated)
+(133 real changes made)
+(1,366,446 missing values generated)
+(28 real changes made)
+(1,366,446 missing values generated)
+(429 real changes made)
+(1,366,446 missing values generated)
+(543 real changes made)
+(1,366,446 missing values generated)
+(708 real changes made)
+(1,366,446 missing values generated)
+(133 real changes made)
+(1,366,446 missing values generated)
+(8,689 real changes made)
+(1,366,446 missing values generated)
+(0 real changes made)
+(1,366,446 missing values generated)
+(0 real changes made)
+(1,366,446 missing values generated)
+(1,019 real changes made)
+(1,366,446 missing values generated)
+(3,026 real changes made)
+(1,366,446 missing values generated)
+(2,379 real changes made)
+(1,366,446 missing values generated)
+(855 real changes made)
+(1,366,446 missing values generated)
+(95 real changes made)
+(1,366,446 missing values generated)
+(0 real changes made)
+(1,366,446 missing values generated)
+(1,286 real changes made)
+(1,366,446 missing values generated)
+(103 real changes made)
+(1,366,446 missing values generated)
+(2,128 real changes made)
+(1,366,446 missing values generated)
+(2,984 real changes made)
+(1,366,446 missing values generated)
+(0 real changes made)
+(1,366,446 missing values generated)
+(28 real changes made)
+(1,366,446 missing values generated)
+(680 real changes made)
+(1,366,446 missing values generated)
+(257 real changes made)
+(1,366,446 missing values generated)
+(0 real changes made)
+(1,366,446 missing values generated)
+(1,008 real changes made)
+(1,366,446 missing values generated)
+(211 real changes made)
+(1,366,446 missing values generated)
+(198 real changes made)
+(1,366,446 missing values generated)
+(730 real changes made)
+(1,366,446 missing values generated)
+(67 real changes made)
+(1,366,446 missing values generated)
+(73 real changes made)
+(1,366,446 missing values generated)
+(2,143 real changes made)
+(1,366,446 missing values generated)
+(0 real changes made)
+(1,366,446 missing values generated)
+(468 real changes made)
+(1,366,446 missing values generated)
+(717 real changes made)
+(1,366,446 missing values generated)
+(102 real changes made)
+(1,366,446 missing values generated)
+(1,703 real changes made)
+(1,366,446 missing values generated)
+(438 real changes made)
+(1,366,446 missing values generated)
+(92 real changes made)
+(1,366,446 missing values generated)
+(2,418 real changes made)
+(1,366,446 missing values generated)
+(5,102 real changes made)
+(1,366,446 missing values generated)
+(12 real changes made)
+(1,366,446 missing values generated)
+(1,019 real changes made)
+(1,366,446 missing values generated)
+(499 real changes made)
+(1,366,446 missing values generated)
+(151 real changes made)
+(1,366,446 missing values generated)
+(1,678 real changes made)
+(1,366,446 missing values generated)
+(1,315 real changes made)
+(1,366,446 missing values generated)
+(5,785 real changes made)
+(1,366,446 missing values generated)
+(1,043 real changes made)
+(1,366,446 missing values generated)
+(441 real changes made)
+(1,366,446 missing values generated)
+(141 real changes made)
+(1,366,446 missing values generated)
+(637 real changes made)
+(1,366,446 missing values generated)
+(520 real changes made)
+(1,366,446 missing values generated)
+(652 real changes made)
+(1,366,446 missing values generated)
+(3,435 real changes made)
+(1,366,446 missing values generated)
+(0 real changes made)
+(1,366,446 missing values generated)
+(13,597 real changes made)
+(1,366,446 missing values generated)
+(42 real changes made)
+(1,366,446 missing values generated)
+(14,445 real changes made)
+(1,366,446 missing values generated)
+(434 real changes made)
+(1,366,446 missing values generated)
+(1,339 real changes made)
+(1,366,446 missing values generated)
+(111 real changes made)
+(1,366,446 missing values generated)
+(109 real changes made)
+(1,366,446 missing values generated)
+(148 real changes made)
+(1,366,446 missing values generated)
+(283 real changes made)
+(1,366,446 missing values generated)
+(79,208 real changes made)
+(1,366,446 missing values generated)
+(5,219 real changes made)
+(1,366,446 missing values generated)
+(82,171 real changes made)
+(1,366,446 missing values generated)
+(1,708 real changes made)
+(1,366,446 missing values generated)
+(83,879 real changes made)
+(1,366,446 missing values generated)
+(84,712 real changes made)
+(1,450,325 missing values generated)
+(1,366,446 missing values generated)
+{res}{txt}(1,366,446 missing values generated)
+(352,277 real changes made)
+(1,366,446 missing values generated)
+(161,896 real changes made)
+{err}log file already open
+{txt}{search r(604), local:r(604);}
+
+end of do-file
+
+{search r(604), local:r(604);}
+
+{com}. log close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}/Users/jpmvbastos/Documents/GitHub/OccupationalLicensingBR/Data/Results/demographics_2024.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res} 4 Nov 2024, 12:09:26
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}

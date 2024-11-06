@@ -1,0 +1,77 @@
+{smcl}
+{txt}{sf}{ul off}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}/Users/jpmvbastos/Documents/GitHub/OccupationalLicensingBR/Data/Results/demographics_2014.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res} 4 Nov 2024, 14:14:31
+Mean demographics_2014, category unlicensed, Quarter 1
+
+{smcl}
+{reset}{...}
+{hline 6}{c -}{c TT}{c -}{c -}{hline 8}
+urban{space 1} {c |}  {result:.8811404}
+female {c |}  {result:.4123516}
+{hline 6}{c -}{c BT}{c -}{c -}{hline 8}
+Mean demographics_2014, category licensed_t, Quarter 1
+{res}
+{smcl}
+{reset}{...}
+{hline 6}{c -}{c TT}{c -}{c -}{hline 8}
+urban{space 1} {c |}  {result:.9546323}
+female {c |}  {result:.3792101}
+{hline 6}{c -}{c BT}{c -}{c -}{hline 8}
+Mean demographics_2014, category unlicensed, Quarter 2
+{res}
+{smcl}
+{reset}{...}
+{hline 6}{c -}{c TT}{c -}{c -}{hline 8}
+urban{space 1} {c |}  {space 1}{result:.881318}
+female {c |}  {result:.4144916}
+{hline 6}{c -}{c BT}{c -}{c -}{hline 8}
+Mean demographics_2014, category licensed_t, Quarter 2
+{res}
+{smcl}
+{reset}{...}
+{hline 6}{c -}{c TT}{c -}{c -}{hline 8}
+urban{space 1} {c |}  {result:.9515618}
+female {c |}  {result:.3750468}
+{hline 6}{c -}{c BT}{c -}{c -}{hline 8}
+Mean demographics_2014, category unlicensed, Quarter 3
+{res}
+{smcl}
+{reset}{...}
+{hline 6}{c -}{c TT}{c -}{c -}{hline 8}
+urban{space 1} {c |}  {result:.8804222}
+female {c |}  {result:.4149908}
+{hline 6}{c -}{c BT}{c -}{c -}{hline 8}
+Mean demographics_2014, category licensed_t, Quarter 3
+{res}
+{smcl}
+{reset}{...}
+{hline 6}{c -}{c TT}{c -}{c -}{hline 8}
+urban{space 1} {c |}  {space 1}{result:.951056}
+female {c |}  {result:.3700951}
+{hline 6}{c -}{c BT}{c -}{c -}{hline 8}
+Mean demographics_2014, category unlicensed, Quarter 4
+{res}
+{smcl}
+{reset}{...}
+{hline 6}{c -}{c TT}{c -}{c -}{hline 8}
+urban{space 1} {c |}  {space 1}{result:.880856}
+female {c |}  {result:.4155872}
+{hline 6}{c -}{c BT}{c -}{c -}{hline 8}
+Mean demographics_2014, category licensed_t, Quarter 4
+{res}
+{smcl}
+{reset}{...}
+{hline 6}{c -}{c TT}{c -}{c -}{hline 8}
+urban{space 1} {c |}  {result:.9525547}
+female {c |}  {result:.3829049}
+{hline 6}{c -}{c BT}{c -}{c -}{hline 8}
+      name:  {res}<unnamed>
+       {txt}log:  {res}/Users/jpmvbastos/Documents/GitHub/OccupationalLicensingBR/Data/Results/demographics_2014.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res} 4 Nov 2024, 14:14:38
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}

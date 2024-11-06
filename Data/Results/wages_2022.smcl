@@ -1,0 +1,77 @@
+{smcl}
+{txt}{sf}{ul off}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}/Users/jpmvbastos/Documents/GitHub/OccupationalLicensingBR/Data/Results/wages_2022.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res} 4 Nov 2024, 14:23:50
+Mean demographics_2022, category unlicensed, Quarter 1
+
+{smcl}
+{reset}{...}
+{hline 6}{c -}{c TT}{c -}{c -}{hline 7}
+Mean{space 2} {c |}  {result:2521.24}
+Median {c |}  {space 3}{result:1600}
+{hline 6}{c -}{c BT}{c -}{c -}{hline 7}
+Mean demographics_2022, category licensed_t, Quarter 1
+{res}
+{smcl}
+{reset}{...}
+{hline 6}{c -}{c TT}{c -}{c -}{hline 7}
+Mean{space 2} {c |}  {result:4361.12}
+Median {c |}  {space 3}{result:2500}
+{hline 6}{c -}{c BT}{c -}{c -}{hline 7}
+Mean demographics_2022, category unlicensed, Quarter 2
+{res}
+{smcl}
+{reset}{...}
+{hline 6}{c -}{c TT}{c -}{c -}{hline 7}
+Mean{space 2} {c |}  {result:2433.92}
+Median {c |}  {space 3}{result:1500}
+{hline 6}{c -}{c BT}{c -}{c -}{hline 7}
+Mean demographics_2022, category licensed_t, Quarter 2
+{res}
+{smcl}
+{reset}{...}
+{hline 6}{c -}{c TT}{c -}{c -}{hline 8}
+Mean{space 2} {c |}  {result:4325.039}
+Median {c |}  {space 4}{result:2500}
+{hline 6}{c -}{c BT}{c -}{c -}{hline 8}
+Mean demographics_2022, category unlicensed, Quarter 3
+{res}
+{smcl}
+{reset}{...}
+{hline 6}{c -}{c TT}{c -}{c -}{hline 8}
+Mean{space 2} {c |}  {result:2509.818}
+Median {c |}  {space 4}{result:1600}
+{hline 6}{c -}{c BT}{c -}{c -}{hline 8}
+Mean demographics_2022, category licensed_t, Quarter 3
+{res}
+{smcl}
+{reset}{...}
+{hline 6}{c -}{c TT}{c -}{c -}{hline 8}
+Mean{space 2} {c |}  {result:4426.554}
+Median {c |}  {space 4}{result:2500}
+{hline 6}{c -}{c BT}{c -}{c -}{hline 8}
+Mean demographics_2022, category unlicensed, Quarter 4
+{res}
+{smcl}
+{reset}{...}
+{hline 6}{c -}{c TT}{c -}{c -}{hline 8}
+Mean{space 2} {c |}  {result:2612.171}
+Median {c |}  {space 4}{result:1690}
+{hline 6}{c -}{c BT}{c -}{c -}{hline 8}
+Mean demographics_2022, category licensed_t, Quarter 4
+{res}
+{smcl}
+{reset}{...}
+{hline 6}{c -}{c TT}{c -}{c -}{hline 8}
+Mean{space 2} {c |}  {result:4752.867}
+Median {c |}  {space 4}{result:3000}
+{hline 6}{c -}{c BT}{c -}{c -}{hline 8}
+      name:  {res}<unnamed>
+       {txt}log:  {res}/Users/jpmvbastos/Documents/GitHub/OccupationalLicensingBR/Data/Results/wages_2022.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res} 4 Nov 2024, 14:23:56
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}

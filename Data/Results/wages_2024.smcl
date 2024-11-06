@@ -1,0 +1,47 @@
+{smcl}
+{txt}{sf}{ul off}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}/Users/jpmvbastos/Documents/GitHub/OccupationalLicensingBR/Data/Results/wages_2024.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res} 4 Nov 2024, 14:25:41
+Mean demographics_2024, category unlicensed, Quarter 1
+
+{smcl}
+{reset}{...}
+{hline 6}{c -}{c TT}{c -}{c -}{hline 8}
+Mean{space 2} {c |}  {result:3085.806}
+Median {c |}  {space 4}{result:2000}
+{hline 6}{c -}{c BT}{c -}{c -}{hline 8}
+Mean demographics_2024, category licensed_t, Quarter 1
+{res}
+{smcl}
+{reset}{...}
+{hline 6}{c -}{c TT}{c -}{c -}{hline 8}
+Mean{space 2} {c |}  {result:5202.761}
+Median {c |}  {space 4}{result:3000}
+{hline 6}{c -}{c BT}{c -}{c -}{hline 8}
+Mean demographics_2024, category unlicensed, Quarter 2
+{res}
+{smcl}
+{reset}{...}
+{hline 6}{c -}{c TT}{c -}{c -}{hline 8}
+Mean{space 2} {c |}  {result:2929.175}
+Median {c |}  {space 4}{result:1900}
+{hline 6}{c -}{c BT}{c -}{c -}{hline 8}
+Mean demographics_2024, category licensed_t, Quarter 2
+{res}
+{smcl}
+{reset}{...}
+{hline 6}{c -}{c TT}{c -}{c -}{hline 8}
+Mean{space 2} {c |}  {result:5118.703}
+Median {c |}  {space 4}{result:3000}
+{hline 6}{c -}{c BT}{c -}{c -}{hline 8}
+Mean demographics_2024, category unlicensed, Quarter 3
+{res}{err}no observations
+{txt}{search r(2000), local:r(2000);}
+
+end of do-file
+
+{search r(2000), local:r(2000);}
+
+{com}. 

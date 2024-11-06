@@ -1,0 +1,192 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}/Users/jpmvbastos/Documents/GitHub/OccupationalLicensingBR/Data/Results/demographics_.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res} 2 Nov 2024, 09:08:52
+{txt}
+{com}. 
+. *svyset [pweight= V1028], strata(Estrato) psu(UPA)
+. 
+. forvalues i=1/4 {c -(}
+{txt}  2{com}.         *display("% of Workforce in category, Quarter `i'")
+.         *svy: mean regulated minreq licensed_t if Trimestre==`i'
+.         *table if Trimestre==`i' [pweight=V1028], stat(mean regulated minreq licensed_t)
+.         foreach j in allworkers unlicensed minreq licensed_t {c -(}
+{txt}  3{com}.         display("Mean demographics_`year', category `j', Quarter `i'")
+{txt}  4{com}.         *       svy: mean rendimento_bruto if Trimestre==`i' & `j'==1
+.         *       table if Trimestre==`i' & `j'==1 [pweight=V1028] , stat(mean rendimento) stat(median rendimento)
+.                 table if Trimestre==`i' & `j'==1, stat(mean urban female formal social_security)
+{txt}  5{com}.         
+. {c )-}
+{txt}  6{com}. {c )-}
+Mean demographics_, category allworkers, Quarter 1
+{res}
+{smcl}
+{reset}{...}
+{hline 15}{c -}{c TT}{c -}{c -}{hline 8}
+urban{space 10} {c |}  {result:.7838038}
+female{space 9} {c |}  {result:.3934989}
+formal{space 9} {c |}  {result:.3991568}
+social_security {c |}  {result:.1152709}
+{hline 15}{c -}{c BT}{c -}{c -}{hline 8}
+Mean demographics_, category unlicensed, Quarter 1
+{res}
+{smcl}
+{reset}{...}
+{hline 15}{c -}{c TT}{c -}{c -}{hline 8}
+urban{space 10} {c |}  {result:.7720087}
+female{space 9} {c |}  {result:.3964113}
+formal{space 9} {c |}  {result:.4002236}
+social_security {c |}  {result:.1080884}
+{hline 15}{c -}{c BT}{c -}{c -}{hline 8}
+Mean demographics_, category minreq, Quarter 1
+{res}
+{smcl}
+{reset}{...}
+{hline 15}{c -}{c TT}{c -}{c -}{hline 8}
+urban{space 10} {c |}  {space 1}{result:.897538}
+female{space 9} {c |}  {result:.3654154}
+formal{space 9} {c |}  {space 2}{result:.38887}
+social_security {c |}  {result:.1845287}
+{hline 15}{c -}{c BT}{c -}{c -}{hline 8}
+Mean demographics_, category licensed_t, Quarter 1
+{res}
+{smcl}
+{reset}{...}
+{hline 15}{c -}{c TT}{c -}{c -}{hline 8}
+urban{space 10} {c |}  {result:.8973662}
+female{space 9} {c |}  {result:.3586994}
+formal{space 9} {c |}  {result:.3930424}
+social_security {c |}  {result:.1855018}
+{hline 15}{c -}{c BT}{c -}{c -}{hline 8}
+Mean demographics_, category allworkers, Quarter 2
+{res}
+{smcl}
+{reset}{...}
+{hline 15}{c -}{c TT}{c -}{c -}{hline 8}
+urban{space 10} {c |}  {result:.7904468}
+female{space 9} {c |}  {result:.4001573}
+formal{space 9} {c |}  {result:.4019941}
+social_security {c |}  {result:.1163047}
+{hline 15}{c -}{c BT}{c -}{c -}{hline 8}
+Mean demographics_, category unlicensed, Quarter 2
+{res}
+{smcl}
+{reset}{...}
+{hline 15}{c -}{c TT}{c -}{c -}{hline 8}
+urban{space 10} {c |}  {result:.7790464}
+female{space 9} {c |}  {result:.4032016}
+formal{space 9} {c |}  {result:.4043824}
+social_security {c |}  {result:.1087648}
+{hline 15}{c -}{c BT}{c -}{c -}{hline 8}
+Mean demographics_, category minreq, Quarter 2
+{res}
+{smcl}
+{reset}{...}
+{hline 15}{c -}{c TT}{c -}{c -}{hline 8}
+urban{space 10} {c |}  {result:.8984876}
+female{space 9} {c |}  {result:.3713068}
+formal{space 9} {c |}  {result:.3793604}
+social_security {c |}  {result:.1877605}
+{hline 15}{c -}{c BT}{c -}{c -}{hline 8}
+Mean demographics_, category licensed_t, Quarter 2
+{res}
+{smcl}
+{reset}{...}
+{hline 15}{c -}{c TT}{c -}{c -}{hline 8}
+urban{space 10} {c |}  {result:.8980755}
+female{space 9} {c |}  {result:.3626963}
+formal{space 9} {c |}  {result:.3844791}
+social_security {c |}  {result:.1893432}
+{hline 15}{c -}{c BT}{c -}{c -}{hline 8}
+Mean demographics_, category allworkers, Quarter 3
+{res}
+{smcl}
+{reset}{...}
+{hline 15}{c -}{c TT}{c -}{c -}{hline 8}
+urban{space 10} {c |}  {result:.7889195}
+female{space 9} {c |}  {result:.4007191}
+formal{space 9} {c |}  {result:.4023799}
+social_security {c |}  {space 1}{result:.118041}
+{hline 15}{c -}{c BT}{c -}{c -}{hline 8}
+Mean demographics_, category unlicensed, Quarter 3
+{res}
+{smcl}
+{reset}{...}
+{hline 15}{c -}{c TT}{c -}{c -}{hline 8}
+urban{space 10} {c |}  {result:.7773533}
+female{space 9} {c |}  {result:.4035517}
+formal{space 9} {c |}  {result:.4043465}
+social_security {c |}  {result:.1112414}
+{hline 15}{c -}{c BT}{c -}{c -}{hline 8}
+Mean demographics_, category minreq, Quarter 3
+{res}
+{smcl}
+{reset}{...}
+{hline 15}{c -}{c TT}{c -}{c -}{hline 8}
+urban{space 10} {c |}  {space 1}{result:.897332}
+female{space 9} {c |}  {result:.3741677}
+formal{space 9} {c |}  {result:.3839456}
+social_security {c |}  {result:.1817759}
+{hline 15}{c -}{c BT}{c -}{c -}{hline 8}
+Mean demographics_, category licensed_t, Quarter 3
+{res}
+{smcl}
+{reset}{...}
+{hline 15}{c -}{c TT}{c -}{c -}{hline 8}
+urban{space 10} {c |}  {result:.8969195}
+female{space 9} {c |}  {result:.3664238}
+formal{space 9} {c |}  {result:.3893729}
+social_security {c |}  {result:.1831643}
+{hline 15}{c -}{c BT}{c -}{c -}{hline 8}
+Mean demographics_, category allworkers, Quarter 4
+{res}
+{smcl}
+{reset}{...}
+{hline 15}{c -}{c TT}{c -}{c -}{hline 8}
+urban{space 10} {c |}  {result:.7867978}
+female{space 9} {c |}  {space 2}{result:.40001}
+formal{space 9} {c |}  {result:.4028832}
+social_security {c |}  {result:.1172383}
+{hline 15}{c -}{c BT}{c -}{c -}{hline 8}
+Mean demographics_, category unlicensed, Quarter 4
+{res}
+{smcl}
+{reset}{...}
+{hline 15}{c -}{c TT}{c -}{c -}{hline 8}
+urban{space 10} {c |}  {result:.7754278}
+female{space 9} {c |}  {result:.4030021}
+formal{space 9} {c |}  {result:.4043831}
+social_security {c |}  {result:.1105824}
+{hline 15}{c -}{c BT}{c -}{c -}{hline 8}
+Mean demographics_, category minreq, Quarter 4
+{res}
+{smcl}
+{reset}{...}
+{hline 15}{c -}{c TT}{c -}{c -}{hline 8}
+urban{space 10} {c |}  {result:.8979073}
+female{space 9} {c |}  {result:.3707706}
+formal{space 9} {c |}  {result:.3882261}
+social_security {c |}  {result:.1822805}
+{hline 15}{c -}{c BT}{c -}{c -}{hline 8}
+Mean demographics_, category licensed_t, Quarter 4
+{res}
+{smcl}
+{reset}{...}
+{hline 15}{c -}{c TT}{c -}{c -}{hline 8}
+urban{space 10} {c |}  {result:.8977698}
+female{space 9} {c |}  {result:.3632191}
+formal{space 9} {c |}  {result:.3927556}
+social_security {c |}  {result:.1838547}
+{hline 15}{c -}{c BT}{c -}{c -}{hline 8}
+
+{com}. 
+. log close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}/Users/jpmvbastos/Documents/GitHub/OccupationalLicensingBR/Data/Results/demographics_.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res} 2 Nov 2024, 09:09:02
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}

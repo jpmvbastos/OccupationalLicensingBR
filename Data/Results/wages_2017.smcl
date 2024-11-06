@@ -1,0 +1,77 @@
+{smcl}
+{txt}{sf}{ul off}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}/Users/jpmvbastos/Documents/GitHub/OccupationalLicensingBR/Data/Results/wages_2017.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res} 4 Nov 2024, 14:18:17
+Mean demographics_2017, category unlicensed, Quarter 1
+
+{smcl}
+{reset}{...}
+{hline 6}{c -}{c TT}{c -}{c -}{hline 8}
+Mean{space 2} {c |}  {result:2054.697}
+Median {c |}  {space 4}{result:1300}
+{hline 6}{c -}{c BT}{c -}{c -}{hline 8}
+Mean demographics_2017, category licensed_t, Quarter 1
+{res}
+{smcl}
+{reset}{...}
+{hline 6}{c -}{c TT}{c -}{c -}{hline 8}
+Mean{space 2} {c |}  {result:3840.496}
+Median {c |}  {space 4}{result:2200}
+{hline 6}{c -}{c BT}{c -}{c -}{hline 8}
+Mean demographics_2017, category unlicensed, Quarter 2
+{res}
+{smcl}
+{reset}{...}
+{hline 6}{c -}{c TT}{c -}{c -}{hline 7}
+Mean{space 2} {c |}  {result:1878.81}
+Median {c |}  {space 3}{result:1200}
+{hline 6}{c -}{c BT}{c -}{c -}{hline 7}
+Mean demographics_2017, category licensed_t, Quarter 2
+{res}
+{smcl}
+{reset}{...}
+{hline 6}{c -}{c TT}{c -}{c -}{hline 8}
+Mean{space 2} {c |}  {result:3508.192}
+Median {c |}  {space 4}{result:2000}
+{hline 6}{c -}{c BT}{c -}{c -}{hline 8}
+Mean demographics_2017, category unlicensed, Quarter 3
+{res}
+{smcl}
+{reset}{...}
+{hline 6}{c -}{c TT}{c -}{c -}{hline 8}
+Mean{space 2} {c |}  {result:1895.852}
+Median {c |}  {space 4}{result:1200}
+{hline 6}{c -}{c BT}{c -}{c -}{hline 8}
+Mean demographics_2017, category licensed_t, Quarter 3
+{res}
+{smcl}
+{reset}{...}
+{hline 6}{c -}{c TT}{c -}{c -}{hline 8}
+Mean{space 2} {c |}  {result:3524.749}
+Median {c |}  {space 4}{result:2000}
+{hline 6}{c -}{c BT}{c -}{c -}{hline 8}
+Mean demographics_2017, category unlicensed, Quarter 4
+{res}
+{smcl}
+{reset}{...}
+{hline 6}{c -}{c TT}{c -}{c -}{hline 8}
+Mean{space 2} {c |}  {result:1967.506}
+Median {c |}  {space 4}{result:1294}
+{hline 6}{c -}{c BT}{c -}{c -}{hline 8}
+Mean demographics_2017, category licensed_t, Quarter 4
+{res}
+{smcl}
+{reset}{...}
+{hline 6}{c -}{c TT}{c -}{c -}{hline 8}
+Mean{space 2} {c |}  {result:3768.824}
+Median {c |}  {space 4}{result:2000}
+{hline 6}{c -}{c BT}{c -}{c -}{hline 8}
+      name:  {res}<unnamed>
+       {txt}log:  {res}/Users/jpmvbastos/Documents/GitHub/OccupationalLicensingBR/Data/Results/wages_2017.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res} 4 Nov 2024, 14:18:24
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}

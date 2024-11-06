@@ -1,0 +1,77 @@
+{smcl}
+{txt}{sf}{ul off}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}/Users/jpmvbastos/Documents/GitHub/OccupationalLicensingBR/Data/Results/wages_2013.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res} 4 Nov 2024, 14:13:01
+Mean demographics_2013, category unlicensed, Quarter 1
+
+{smcl}
+{reset}{...}
+{hline 6}{c -}{c TT}{c -}{c -}{hline 8}
+Mean{space 2} {c |}  {result:1433.088}
+Median {c |}  {space 5}{result:900}
+{hline 6}{c -}{c BT}{c -}{c -}{hline 8}
+Mean demographics_2013, category licensed_t, Quarter 1
+{res}
+{smcl}
+{reset}{...}
+{hline 6}{c -}{c TT}{c -}{c -}{hline 8}
+Mean{space 2} {c |}  {result:2740.055}
+Median {c |}  {space 4}{result:1500}
+{hline 6}{c -}{c BT}{c -}{c -}{hline 8}
+Mean demographics_2013, category unlicensed, Quarter 2
+{res}
+{smcl}
+{reset}{...}
+{hline 6}{c -}{c TT}{c -}{c -}{hline 8}
+Mean{space 2} {c |}  {result:1418.884}
+Median {c |}  {space 5}{result:900}
+{hline 6}{c -}{c BT}{c -}{c -}{hline 8}
+Mean demographics_2013, category licensed_t, Quarter 2
+{res}
+{smcl}
+{reset}{...}
+{hline 6}{c -}{c TT}{c -}{c -}{hline 8}
+Mean{space 2} {c |}  {result:2680.526}
+Median {c |}  {space 4}{result:1500}
+{hline 6}{c -}{c BT}{c -}{c -}{hline 8}
+Mean demographics_2013, category unlicensed, Quarter 3
+{res}
+{smcl}
+{reset}{...}
+{hline 6}{c -}{c TT}{c -}{c -}{hline 8}
+Mean{space 2} {c |}  {result:1448.948}
+Median {c |}  {space 5}{result:900}
+{hline 6}{c -}{c BT}{c -}{c -}{hline 8}
+Mean demographics_2013, category licensed_t, Quarter 3
+{res}
+{smcl}
+{reset}{...}
+{hline 6}{c -}{c TT}{c -}{c -}{hline 7}
+Mean{space 2} {c |}  {result:2751.04}
+Median {c |}  {space 3}{result:1500}
+{hline 6}{c -}{c BT}{c -}{c -}{hline 7}
+Mean demographics_2013, category unlicensed, Quarter 4
+{res}
+{smcl}
+{reset}{...}
+{hline 6}{c -}{c TT}{c -}{c -}{hline 8}
+Mean{space 2} {c |}  {result:1464.275}
+Median {c |}  {space 4}{result:1000}
+{hline 6}{c -}{c BT}{c -}{c -}{hline 8}
+Mean demographics_2013, category licensed_t, Quarter 4
+{res}
+{smcl}
+{reset}{...}
+{hline 6}{c -}{c TT}{c -}{c -}{hline 8}
+Mean{space 2} {c |}  {result:2842.282}
+Median {c |}  {space 4}{result:1650}
+{hline 6}{c -}{c BT}{c -}{c -}{hline 8}
+      name:  {res}<unnamed>
+       {txt}log:  {res}/Users/jpmvbastos/Documents/GitHub/OccupationalLicensingBR/Data/Results/wages_2013.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res} 4 Nov 2024, 14:13:08
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}

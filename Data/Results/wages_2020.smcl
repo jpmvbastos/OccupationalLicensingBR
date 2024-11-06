@@ -1,0 +1,77 @@
+{smcl}
+{txt}{sf}{ul off}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}/Users/jpmvbastos/Documents/GitHub/OccupationalLicensingBR/Data/Results/wages_2020.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res} 4 Nov 2024, 14:21:52
+Mean demographics_2020, category unlicensed, Quarter 1
+
+{smcl}
+{reset}{...}
+{hline 6}{c -}{c TT}{c -}{c -}{hline 8}
+Mean{space 2} {c |}  {result:2365.082}
+Median {c |}  {space 4}{result:1500}
+{hline 6}{c -}{c BT}{c -}{c -}{hline 8}
+Mean demographics_2020, category licensed_t, Quarter 1
+{res}
+{smcl}
+{reset}{...}
+{hline 6}{c -}{c TT}{c -}{c -}{hline 8}
+Mean{space 2} {c |}  {result:4249.216}
+Median {c |}  {space 4}{result:2500}
+{hline 6}{c -}{c BT}{c -}{c -}{hline 8}
+Mean demographics_2020, category unlicensed, Quarter 2
+{res}
+{smcl}
+{reset}{...}
+{hline 6}{c -}{c TT}{c -}{c -}{hline 8}
+Mean{space 2} {c |}  {result:2232.483}
+Median {c |}  {space 4}{result:1400}
+{hline 6}{c -}{c BT}{c -}{c -}{hline 8}
+Mean demographics_2020, category licensed_t, Quarter 2
+{res}
+{smcl}
+{reset}{...}
+{hline 6}{c -}{c TT}{c -}{c -}{hline 8}
+Mean{space 2} {c |}  {result:3879.356}
+Median {c |}  {space 4}{result:2300}
+{hline 6}{c -}{c BT}{c -}{c -}{hline 8}
+Mean demographics_2020, category unlicensed, Quarter 3
+{res}
+{smcl}
+{reset}{...}
+{hline 6}{c -}{c TT}{c -}{c -}{hline 8}
+Mean{space 2} {c |}  {result:2214.487}
+Median {c |}  {space 4}{result:1400}
+{hline 6}{c -}{c BT}{c -}{c -}{hline 8}
+Mean demographics_2020, category licensed_t, Quarter 3
+{res}
+{smcl}
+{reset}{...}
+{hline 6}{c -}{c TT}{c -}{c -}{hline 8}
+Mean{space 2} {c |}  {result:3950.043}
+Median {c |}  {space 4}{result:2200}
+{hline 6}{c -}{c BT}{c -}{c -}{hline 8}
+Mean demographics_2020, category unlicensed, Quarter 4
+{res}
+{smcl}
+{reset}{...}
+{hline 6}{c -}{c TT}{c -}{c -}{hline 8}
+Mean{space 2} {c |}  {result:2258.244}
+Median {c |}  {space 4}{result:1500}
+{hline 6}{c -}{c BT}{c -}{c -}{hline 8}
+Mean demographics_2020, category licensed_t, Quarter 4
+{res}
+{smcl}
+{reset}{...}
+{hline 6}{c -}{c TT}{c -}{c -}{hline 8}
+Mean{space 2} {c |}  {result:4064.078}
+Median {c |}  {space 4}{result:2500}
+{hline 6}{c -}{c BT}{c -}{c -}{hline 8}
+      name:  {res}<unnamed>
+       {txt}log:  {res}/Users/jpmvbastos/Documents/GitHub/OccupationalLicensingBR/Data/Results/wages_2020.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res} 4 Nov 2024, 14:21:57
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}

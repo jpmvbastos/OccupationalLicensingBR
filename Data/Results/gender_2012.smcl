@@ -1,0 +1,22 @@
+{smcl}
+{txt}{sf}{ul off}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}/Users/jpmvbastos/Documents/GitHub/OccupationalLicensingBR/Data/Results/gender_2012.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res} 2 Nov 2024, 09:06:06
+% of Workforce in category, Quarter 1
+{err}1& invalid name
+{txt}{search r(198), local:r(198);}
+
+end of do-file
+
+{search r(198), local:r(198);}
+
+{com}. log close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}/Users/jpmvbastos/Documents/GitHub/OccupationalLicensingBR/Data/Results/gender_2012.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res} 2 Nov 2024, 09:07:07
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}

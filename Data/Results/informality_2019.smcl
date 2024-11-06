@@ -1,0 +1,77 @@
+{smcl}
+{txt}{sf}{ul off}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}/Users/jpmvbastos/Documents/GitHub/OccupationalLicensingBR/Data/Results/informality_2019.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res} 4 Nov 2024, 14:21:08
+Mean demographics_2019, category unlicensed, Quarter 1
+
+{smcl}
+{reset}{...}
+{hline 9}{c -}{c TT}{c -}{c -}{hline 8}
+informal1 {c |}  {result:.3511023}
+informal2 {c |}  {result:.3688205}
+{hline 9}{c -}{c BT}{c -}{c -}{hline 8}
+Mean demographics_2019, category licensed_t, Quarter 1
+{res}
+{smcl}
+{reset}{...}
+{hline 9}{c -}{c TT}{c -}{c -}{hline 8}
+informal1 {c |}  {result:.3188832}
+informal2 {c |}  {result:.3715441}
+{hline 9}{c -}{c BT}{c -}{c -}{hline 8}
+Mean demographics_2019, category unlicensed, Quarter 2
+{res}
+{smcl}
+{reset}{...}
+{hline 9}{c -}{c TT}{c -}{c -}{hline 8}
+informal1 {c |}  {result:.3538041}
+informal2 {c |}  {result:.3697412}
+{hline 9}{c -}{c BT}{c -}{c -}{hline 8}
+Mean demographics_2019, category licensed_t, Quarter 2
+{res}
+{smcl}
+{reset}{...}
+{hline 9}{c -}{c TT}{c -}{c -}{hline 8}
+informal1 {c |}  {result:.3241978}
+informal2 {c |}  {result:.3725927}
+{hline 9}{c -}{c BT}{c -}{c -}{hline 8}
+Mean demographics_2019, category unlicensed, Quarter 3
+{res}
+{smcl}
+{reset}{...}
+{hline 9}{c -}{c TT}{c -}{c -}{hline 8}
+informal1 {c |}  {result:.3575228}
+informal2 {c |}  {result:.3714123}
+{hline 9}{c -}{c BT}{c -}{c -}{hline 8}
+Mean demographics_2019, category licensed_t, Quarter 3
+{res}
+{smcl}
+{reset}{...}
+{hline 9}{c -}{c TT}{c -}{c -}{hline 8}
+informal1 {c |}  {result:.3360848}
+informal2 {c |}  {result:.3788988}
+{hline 9}{c -}{c BT}{c -}{c -}{hline 8}
+Mean demographics_2019, category unlicensed, Quarter 4
+{res}
+{smcl}
+{reset}{...}
+{hline 9}{c -}{c TT}{c -}{c -}{hline 8}
+informal1 {c |}  {result:.3548302}
+informal2 {c |}  {result:.3687087}
+{hline 9}{c -}{c BT}{c -}{c -}{hline 8}
+Mean demographics_2019, category licensed_t, Quarter 4
+{res}
+{smcl}
+{reset}{...}
+{hline 9}{c -}{c TT}{c -}{c -}{hline 8}
+informal1 {c |}  {result:.3263438}
+informal2 {c |}  {result:.3737203}
+{hline 9}{c -}{c BT}{c -}{c -}{hline 8}
+      name:  {res}<unnamed>
+       {txt}log:  {res}/Users/jpmvbastos/Documents/GitHub/OccupationalLicensingBR/Data/Results/informality_2019.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res} 4 Nov 2024, 14:21:15
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}
